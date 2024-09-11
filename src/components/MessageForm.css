@@ -1,0 +1,28 @@
+#contact-form {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+#contact-form > .form-item {
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    padding: 0.5rem 0;
+}
+
+#contact-form > .form-item input,
+#contact-form > .form-item textarea,
+#contact-form > .form-item button {
+    background-color: rgba(255, 255, 0, 0.6);
+    backdrop-filter: blur(5px);
+    color: var(--dark);
+    padding: 0.7em 1.2em;
+    border: 1px solid #aaa;
+    outline-color: #ddd;
+}
+
+#contact-form > .form-item label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

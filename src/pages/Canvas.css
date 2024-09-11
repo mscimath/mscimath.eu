@@ -1,0 +1,47 @@
+.canvas-sandbox {
+    height: 80vh;
+    width: 46vw; /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
+    border: 12px solid rgba(255, 192, 203, 0.2);
+    border-radius: 2%;
+    margin: 0;
+    background-color: rgba(255, 192, 203, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 1px 1px rgba(225, 225, 225, 0.4);
+
+}
+
+.subject-intro-container{ /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
+    box-shadow: inset 1px 1px 1px 1px rgba(225, 225, 225, 0.4);
+    width: 80vw;
+    margin: auto;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: #ffd;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.5) 29px, rgba(0, 0, 0, 0.5) 30px), linear-gradient(90deg, rgba(0, 0, 0, 0) 29px, rgba(0, 0, 0, 0.5) 29px, rgba(0, 0, 0, 0.5) 30px);
+    background-size: 30px 30px, 30px 30px;
+}
+
+.canvas-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block; /*Removes any default spacing/borders that might affect sizing*/
+}
+
+
+.content-text {
+    height: 80vh;
+    width: 46vw;
+    margin: 2vw;
+    background-color: rgba(255, 192, 203, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    border-radius: 2%;
+}
+
+/*Mathematics*/
+/*Combinatorics*/
+#combinatorics-canvas > canvas {
+    width: 300px;
+    flex: 1;
+}

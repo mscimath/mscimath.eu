@@ -1,0 +1,543 @@
+/*~~~~
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  color: #fff;
+  line-height: 1.6;
+  height: 100vh;
+  background: url("img/back_navy.png") no-repeat
+    center center/cover;
+  background-attachment: fixed;
+}
+
+#App {
+  overflow-x: visible;
+}
+
+.main-container {
+  width: 100%;
+  position: relative;
+  //nie dodane: CSS Smooth Scroll 
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;//
+}
+
+
+header#main-header {
+  overflow-x: visible;
+  z-index: 1010;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(250, 250, 250, 0));
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  padding: 0 30px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: visible;
+  z-index: 10;
+}
+
+.menu {
+  overflow-x: visible;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.menu .menu-item {
+  margin-right: 5vw;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.menu .menu-item a:hover {
+  color: #f4f4f4;
+}
+
+.main-container a, .menu-item a {
+  text-decoration: none;
+  color: #f4f4f4;
+  transition: all 400ms;
+}
+
+.main-container a:hover {
+  color: rgb(187, 221, 210); 
+}
+
+ Logo 
+.logo {
+  display: block;
+  width: 70px;
+  height: auto;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.logo img {
+  width: 100%;
+}~~~~ */
+
+/*Dropdown Nav */
+.menu-item {
+  position: relative; 
+  padding: 1rem;
+  overflow-x: visible;
+}
+
+.menu-item:hover table,
+.menu-item:focus table {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav_list_drop {
+  position: absolute;
+  text-align: left;
+  line-height: 1em;
+  background: rgba(0, 0, 0, 0.807);
+  padding: 0.7rem 0;
+  border-radius: 2px;
+  width: auto;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+  
+}
+
+table.nav_list_drop {
+  border-spacing: 0px 10px;
+  border-collapse: separate;
+}
+
+table.nav_list_drop a {
+  cursor: pointer;
+}
+.nav_list_drop th, .nav_list_drop td {
+  padding: 0.2rem 0.6rem 0.2rem 0.2rem;
+}
+.nav_list_drop th {
+  border-right: solid 1px #f4f4f4;
+}
+.nav_list_drop td a {
+  transition: all 400ms;
+}
+
+/* Bottom line animation */
+.menu .menu-item > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: right center;
+}
+.menu .menu-item > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition-duration: 0.4s;
+}
+
+
+/*Sections*/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  /*scroll-snap-align:  center;*/
+  position: relative;
+  overflow-x: visible;
+
+}
+
+/*Section Subjects on Home Page*/
+
+
+/*Longer Theory*/
+.theory-content {
+  line-height: 1.5rem;
+  overflow-x: visible;
+
+}
+
+/*Subjects Menu*/
+.section-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Add to xs screen plus flex-direction: row to .section-content
+table.theory-subjects td {
+  display: none;
+}*/
+
+table.theory-subjects {
+  margin: 30px auto 0 auto;
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  border-spacing: 30px 0px;
+  border-collapse: separate;
+}
+
+table.theory-subjects tr {
+  display: table-row;
+}
+table.theory-subjects a {
+  text-decoration: none;
+  color:#f4f4f4;
+  cursor: pointer;
+  display: flex;
+  padding-bottom: 10px;
+  align-items: center;
+}
+table.theory-subjects a img, .table-dot {  /*Po przeniesieniu wszystkich tabel do Komponentów, usunąć tu pointer na 'table.theory-subjects a img'*/
+  padding-right: 3px;
+  height: 18px;
+}
+
+section#theory {
+  justify-content: flex-start;
+  overflow-x: visible;
+
+}
+
+section#theory .section-title{
+  width: 100%;
+  padding: 30px 0px 10px 0px;
+}
+
+section#theory .section-title h1 {
+  font-size: 2rem;
+}
+
+section#theory .section-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding: 20px;
+  overflow-x: visible;
+
+}
+
+section#theory .section-main .side-menu {
+  width: 20%; 
+}
+
+section#theory .section-main .main-theory-content {
+  width: 80%;
+  overflow-x: visible;
+
+}
+
+section#home {
+  overflow-x: visible;
+}
+
+section#about {
+  overflow-x: visible;
+}
+
+section#subjects {
+  overflow-x: visible;
+
+}
+section#blog {
+  background: url("https://source.unsplash.com/K2tdx2mFDHc/1600x900") no-repeat
+    center center/cover;
+  background-attachment: fixed;
+  overflow-x: visible;
+
+}
+
+section.simple {
+  height: 100vh;
+  overflow-x: visible;
+
+}
+
+section.long {
+  overflow-x: visible;
+
+}
+
+section .background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:  rgb(182, 182, 182);
+  -webkit-filter: blur(35px);
+  filter: blur(35px);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+section h1 {
+  letter-spacing: 6px;
+  font-weight: 400;
+  font-size: 2.5rem;
+
+}
+
+section h1 span {
+  font-size: 2rem;
+
+}
+
+section h2 {
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+section h2 span {
+  font-size: 80%;
+}
+
+.sm-wide-tx-r {
+  font-weight: 200;/*nie działa*/
+  letter-spacing: 6px;
+  float: right;
+}
+
+section p {
+  font-size: 1.5;
+  overflow-x: visible;
+
+}
+
+section .section-footer {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/*Horizontal Scroll*/
+.horizontal-section {
+  padding: 100px 50px;
+  display: flex;
+  justify-content: start;
+}
+.sticky-container {
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  top: 60px;
+}
+
+.element-container {
+  position: relative;
+  display: flex;
+}
+
+.element {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  padding: 20px 30px;
+  background-color: #aaa;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/*Load Items onScroll*/
+.reveal {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  overflow-x: visible;
+
+}
+.reveal.active {
+  opacity: 1;
+}
+
+/*Search Bar*/
+.search-main-container {
+  width: 100%;
+  /* max-width: 700px;*/
+  margin: 10px auto;
+  overflow-x: visible;
+
+}
+.search-container {
+  padding: 2vw;
+  margin: 0 2vw;
+  overflow-x: visible;
+  position: relative;
+}
+
+.search-header {
+  position: sticky;
+  top: 2.2rem;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+}
+.search-container #search-title {
+  width: 35%;
+  margin: 2vw;
+  padding: 0 2vw;
+  display: flex;
+  background: rgba(255, 255, 0, 0.2);
+  backdrop-filter: blur(5px);
+  color: rgba(242, 241, 241, 0.9);
+  border-radius: 2px;
+  letter-spacing: 3px;
+  align-items: center;
+}
+
+#search {
+  width: 65%;
+  margin: 2vw 2vw 2vw 0;
+  background: rgba(245, 245, 245, 0.6);
+  backdrop-filter: blur(5px);
+  color: #336;
+  overflow-x: visible;
+
+}
+input[type="text"] {
+  padding: 0.7em 1.2em;
+  border: 1px solid #aaa;
+  outline-color: #ddd;
+}
+.blog {
+  background: rgba(116, 116, 116, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 2px;
+  padding: 3vw;
+  margin: 5vw;
+  overflow-x: visible;
+  text-align: left;
+}
+
+.blog > h3 {
+  text-align: center;
+}
+
+.blog code {
+  display: inline;
+}
+
+.blog p {
+  margin-bottom: 1rem;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+.blog-content table {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  border-spacing: 30px 10px;
+  border-collapse: separate;
+}
+
+
+.content-equations {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-equation {
+  padding: 1rem;
+  max-width: 40%;
+  
+}
+
+.note-equations {
+  padding: 1rem;
+  border-left: 1px solid #f4f4f4;
+}
+
+.more-examples {
+  width: 100%;
+}
+.more-examples .example {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.more-examples .title {
+  font-size: 0.7rem;
+}
+
+.example-left, .example-right {
+  margin:1rem;
+  width: auto;
+}
+
+
+.blog pre {
+  text-align: left;
+  overflow-x: visible;
+
+}
+.hidden {
+  display: none;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 800px) {
+  .horizontal-section {
+    padding: 100px 20px;
+  }
+  .element-container .element {
+    width: 450px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .horizontal-section {
+    padding: 50px 15px;
+  }
+  .element-container .element {
+    width: 200px;
+  }
+}
+ 
+/*
+@media only screen and (max-width: 400px) {
+  .menu .menu-item > a {
+    font-size: 10px;
+    color: rgb(83, 83, 200);
+  }
+
+
+}*/

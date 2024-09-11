@@ -1,0 +1,195 @@
+#main-header {
+    position: sticky;
+    top:0px;
+    z-index: 1010;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(250, 250, 250, 0));
+    width: 100vw;
+    height:65px;
+    padding: 0 30px;
+    z-index: 2000;
+    max-width: 100%;
+  }
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    height: 60px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 6px;
+    align-items: center;
+    margin-bottom: 10px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out,  opacity 0.3s ease;
+  }
+
+  .menu-open {
+    max-height: 50px; /*kiedy się chowa to .menu ma wysokosc 0 i nastepuje zmiana wysokosci icon i guzika, trzeba menu dac w diva .collapsable i zrobic by on sie chowal a wysokosc menu zostala ta sama*/
+    opacity: 1;
+  }
+
+  /*Burger Menu*/ 
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #lineOne,
+  #lineTwo,
+  #lineThree {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(24, 120, 244);
+    border-radius: 2px;
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .cross #lineOne{
+    transform: rotate(45deg) translate(0px, 5px);
+  }
+
+  .cross #lineTwo {
+    transform: rotate(-45deg) translate(0px, -5px);
+  }
+
+  .cross #lineThree {
+    transform: scale(0);
+  }
+
+  
+  
+  .menu .menu-item {
+    width:auto;
+    margin-right: 2vw;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  
+  .menu .menu-item a:hover {
+    color: #f4f4f4;
+  }
+
+ .menu-item a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: all 400ms;
+  }
+
+   /*Logo */
+.logo {
+  display: block;
+  width: 70px;
+  height: auto;
+  align-items: center;
+  margin-top: auto;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.logo img {
+  width: 100%;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    
+  #main-header {
+    padding: 0 15px;
+    width: 100%;
+
+  }
+
+  
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: auto;
+    padding-bottom: 0;
+    font-size: small;
+  }
+
+  .menu-open {
+    max-height: 80px; /*kiedy się chowa to .menu ma wysokosc 0 i nastepuje zmiana wysokosci icon i guzika, trzeba menu dac w diva .collapsable i zrobic by on sie chowal a wysokosc menu zostala ta sama*/
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  #lineOne,
+  #lineTwo,
+  #lineThree {
+    width: 20px;
+    height: 4px;
+    background-color: rgb(24, 120, 244);
+    border-radius: 2px;
+    margin-top: 3px;
+    transition: transform 0.3s ease;
+  }
+
+  .cross #lineOne{
+    transform: rotate(45deg) translate(0px, 5px);
+  }
+
+  .cross #lineTwo {
+    transform: rotate(-45deg) translate(0px, -5px);
+  }
+
+  .cross #lineThree {
+    transform: scale(0);
+  }
+  
+  .menu .nav_list {
+    line-height: 1;
+    padding: 0;
+    justify-content: space-between;
+
+  }
+
+  .menu .menu-item {
+    margin: 0px;
+    padding: 4px;
+    line-height: 1;
+  }
+
+  .logo {
+    display: block;
+    width: 40px;
+    height: auto;
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+    border-radius: 2px;
+    text-align: center;
+    white-space: nowrap; /* This is required unless you put the helper span closely near the img */
+  }
+  
+  .logo img {
+    width: 100%;
+    align-self: center;
+  }
+}

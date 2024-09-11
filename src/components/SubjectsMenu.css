@@ -1,0 +1,66 @@
+/*Subjects Menu*/
+
+  
+  /*Add to xs screen plus flex-direction: row to .section-content
+  table.theory-subjects td {
+    display: none;
+  }*/
+#subjects table {
+    margin: 5vh auto 0 auto;
+    
+}
+
+#subjects th {
+    width: 50%;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+
+#subjects td {
+    text-align: left;
+
+}
+
+#subjects th, #subjects td {
+    padding: 1vw 3vw;
+    align-items: left;
+}
+
+#subjects-table > td > a{
+    transition: all 400ms;
+
+}
+
+#subjects td a{
+  text-decoration: none;
+  color: #f4f4f4;
+  cursor: pointer;
+
+}
+  
+  /*
+  table .theory-subjects {
+    margin: 10% auto 0 auto;
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
+    border-spacing: 10% 0px;
+    border-collapse: separate;
+  }
+  
+  table.theory-subjects tr {
+    display: table-row;
+  }
+  table.theory-subjects a {
+    text-decoration: none;
+    color:#f4f4f4;
+    cursor: pointer;
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+  table.theory-subjects a img, .table-dot {  /*Po przeniesieniu wszystkich tabel do Komponentów, usunąć tu pointer na 'table.theory-subjects a img'*/
+   /* padding-right: 3px;
+    height: 18px;
+  }
+  */
