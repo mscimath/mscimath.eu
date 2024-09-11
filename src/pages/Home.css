@@ -16,18 +16,26 @@
 }
 
 /*Home Menu Sections*/
-.menu-section {
+.menu-section h4{
+    font-family: "La Belle Aurore", system-ui;
+    font-weight: 200;
+    font-size: 1.5rem;
 }
 
 /*Home Menu Individual Buttons*/
 .menu-buttons {
-    font-family: "Fasthand", cursive;
+    font-family: "La Belle Aurore", system-ui;
+  font-weight: 400;
+  font-style: normal;
+   /* font-family: "Fasthand", cursive;*/
     font-weight: 400;      
     font-size: 2rem;
 }
 .menu-button {
     all: initial;
-    font-family: "Fasthand", cursive;
+    font-family: "La Belle Aurore", system-ui;
+  font-weight: 400;
+  font-style: normal;
     font-size: 2rem;
     margin: 0 ;
     padding: 0 ;
