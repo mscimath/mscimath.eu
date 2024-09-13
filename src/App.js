@@ -38,8 +38,7 @@ export default function App() {
       <HeaderCollapsable />
       
         <Routes>
-          <Route index element= {<Home />}/>
-          <Route path='/' exact component={<Home />}/>
+          <Route path='/' component={<Home />}/>
           <Route path='/home' element = {<Home />} />
           <Route path='/javascript' element = {<JavaScript />} />
           <Route path='/physics' element = {<Physics />} />

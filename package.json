@@ -1,7 +1,7 @@
 {
   "name": "mscimath-web",
   "version": "0.2.0",
-  "homepage": "https://mscimath.eu/#",
+  "homepage": "https://mscimath.eu",
   "private": true,
   "dependencies": {
     "@sendgrid/mail": "^8.1.0",
