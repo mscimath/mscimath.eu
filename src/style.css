@@ -21,7 +21,9 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  /*font-family: Arial, Helvetica, sans-serif;*/
   background: #333;
   -webkit-backdrop-filter: blur(35px);
   backdrop-filter: blur(35px);

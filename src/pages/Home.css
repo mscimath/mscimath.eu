@@ -17,15 +17,17 @@
 
 /*Home Menu Sections*/
 .menu-section h4{
-    font-family: "La Belle Aurore", system-ui;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 200;
     font-size: 1.5rem;
 }
 
 /*Home Menu Individual Buttons*/
 .menu-buttons {
-    font-family: "La Belle Aurore", system-ui;
-  font-weight: 400;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
   font-style: normal;
    /* font-family: "Fasthand", cursive;*/
     font-weight: 400;      
@@ -33,8 +35,8 @@
 }
 .menu-button {
     all: initial;
-    font-family: "La Belle Aurore", system-ui;
-  font-weight: 400;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
   font-style: normal;
     font-size: 2rem;
     margin: 0 ;
