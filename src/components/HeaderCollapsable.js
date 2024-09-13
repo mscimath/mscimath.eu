@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import logo from '../img/MSlogoXSDF.png';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 export default function HeaderCollapsable(props) {
@@ -14,9 +15,9 @@ export default function HeaderCollapsable(props) {
         <header className={`main-header ${menuOpen ? 'menu-open' : ''}`} id="main-header">
             <div className='top-header' id="top-header">
                 <div className="logo">
-                    <a href="/home">
+                    <Link href="/home">
                         <img src={logo} alt="home"/>
-                    </a>
+                    </Link>
                 </div>
                 <div className={`menu nav_list ${menuOpen ? 'menu-open' : ''}`}>
                     <div className="menu-item smooth-link">
@@ -25,13 +26,13 @@ export default function HeaderCollapsable(props) {
                         </HashLink>
                         <table className="nav_list_drop" id="subjects-drop">
                         <tbody>
-                            <tr><th rowSpan="2">Physics</th><td><a href="/physics">School Physics</a></td></tr>
-                            <tr><td><a href="/relativity">Relativity</a></td></tr>
-                            <tr><th>Mathematics</th><td><a href="/mathematics">School Mathematics Subjects</a></td> </tr>
-                            <tr><th rowSpan="4">Computer Science & Programming</th><td><a href="/javascript">JavaScript</a></td></tr>
-                            <tr><td><a href="/python">Python</a></td></tr>
+                            <tr><th rowSpan="2">Physics</th><td><Link to="/physics">School Physics</Link></td></tr>
+                            <tr><td><Link to="/relativity">Relativity</Link></td></tr>
+                            <tr><th>Mathematics</th><td><Link to="/mathematics">School Mathematics Subjects</Link></td> </tr>
+                            <tr><th rowSpan="4">Computer Science & Programming</th><td><Link to="/javascript">JavaScript</Link></td></tr>
+                            <tr><td><Link to="/python">Python</Link></td></tr>
                             <tr><td><HashLink to="/cpp">C++</HashLink></td></tr>
-                            <tr><td><a href="/data_science">Data Science</a></td></tr>
+                            <tr><td><Link to="/data_science">Data Science</Link></td></tr>
                             </tbody>
                         </table>
                     </div>
