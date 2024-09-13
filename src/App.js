@@ -38,7 +38,7 @@ export default function App() {
       <HeaderCollapsable />
       
         <Routes>
-          <Route path='/' component={<Home />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/home' element = {<Home />} />
           <Route path='/javascript' element = {<JavaScript />} />
           <Route path='/physics' element = {<Physics />} />
@@ -60,9 +60,7 @@ export default function App() {
               onChange={handleChange}
               value={searchInput}/>
             </div>    
-            <div>
-              
-            </div> 
+            
             <Routes>
               <Route path="/" element = {<Blog  input={searchInput} posts={generalPosts}/>}></Route>
               <Route path="/home" element = {<Blog  input={searchInput} posts={generalPosts}/>}></Route>
