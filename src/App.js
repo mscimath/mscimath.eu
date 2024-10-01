@@ -43,7 +43,7 @@ export default function App() {
           <Route path='/javascript' element = {<JavaScript />} />
           <Route path='/physics' element = {<Physics />} />
           <Route path='/python' element = {<Python />} />
-          <Route path='cpp' element = {<Cpp />} />
+          <Route path='/cpp' element = {<Cpp />} />
           <Route path='/mathematics' element={<Mathematics/>} />
           <Route path='/data_science' element={<DataScience />} />
           <Route path='*' element = {<NoPage/>} />

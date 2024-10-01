@@ -9,231 +9,290 @@ const CombinatoricsCanvas = () => {
         const context = canvas.getContext('2d');
 
         const drawNodes = () => {
-            // Drawing operations 
-            // Top Node
-            const r = 4;
+          // Constants
+          const circleRadius = 4;
+
+          /* Draw a circle
+          function drawCircle(x, y) {
+            context.beginPath();
+            context.arc(x, y, circleRadius, 0, 2 * Math.PI);
+            context.stroke();
+          }*/
+          // Recursive function to draw the tree
+          
+          const r = 4; // radius of circles
+
+            
+            function makeNode(move, shift) {
+              context.moveTo(canvas.width/2 - shift*20, canvas.height/2);
+              context.lineTo(canvas.width/2 - move*20, canvas.height/2);
+              context.moveTo(canvas.width/2 + shift*20, canvas.height/2);
+              context.lineTo(canvas.width/2 + move*20, canvas.height/2);
+            }
+
             context.strokeStyle = 'black';
             context.beginPath();
-            context.arc(canvas.width/2, 25, r, 0, 2*Math.PI); 
-            context.moveTo(canvas.width/2, 25);
-            context.lineTo(canvas.width/2, 45);  
-            context.stroke();
-            context.closePath();  
-            // Second from Top Node
-            context.beginPath();
-            context.arc(canvas.width/2, 45, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2, 45);
-            context.lineTo(canvas.width/2 - 30, 65);
-            context.moveTo(canvas.width/2, 45);
-            context.lineTo(canvas.width/2 + 30, 65);
-            context.stroke();
-            //Third from top left node
-            context.beginPath();
-            context.arc(canvas.width/2 - 30, 65, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 30, 65);    
-            context.lineTo(canvas.width/2 - 50, 85);
-            context.moveTo(canvas.width/2 - 30, 65);
-            context.lineTo(canvas.width/2 -10, 85);
-            context.stroke();
-            context.closePath();
-            //Third from top right node
-            context.beginPath();
-            context.arc(canvas.width/2 + 30, 65, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 30, 65, r, 0, 2*Math.PI);
-            context.lineTo(canvas.width/2 + 50, 85);
-            context.moveTo(canvas.width/2 + 30, 65, r, 0, 2*Math.PI);
-            context.lineTo(canvas.width/2 + 10, 85);
+            context.arc(canvas.width/2, canvas.height/2, r, 0, 2*Math.PI);
+            context.moveTo(canvas.width/2, canvas.height/2);
+            context.lineTo(canvas.width/2, canvas.height/2 + 20);
+            context.arc(canvas.width/2, canvas.height/2 + 20, r, 0, 2*Math.PI);
+
+            // Left Up
+            context.moveTo(canvas.width/2, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 - 20, canvas.height/2 +20)
+            context.arc(canvas.width/2 - 20, canvas.height/2 + 20, r, 0, 2*Math.PI );
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 - 20, canvas.height/2);
+            context.arc(canvas.width/2 - 20, canvas.height/2, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2);
+            context.lineTo(canvas.width/2 - 20, canvas.height/2 - 20);
+            context.arc(canvas.width/2 - 20, canvas.height/2 - 20, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 - 20);
+            context.lineTo(canvas.width/2 - 6, canvas.height/2 - 34);
+            context.arc(canvas.width/2 - 6, canvas.height/2 - 34, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 6, canvas.height/2 - 34);
+            context.lineTo(canvas.width/2 - 6, canvas.height/2 - 54);
+            context.arc(canvas.width/2 - 6, canvas.height/2 - 54, r, 0, 2*Math.PI);
+
             context.stroke();
             context.closePath();
-            //Fourth row, first column
+
             context.beginPath();
-            context.arc(canvas.width/2 - 50, 85, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 50, 85);
-            context.lineTo(canvas.width/2 - 90, 105);
-            context.moveTo(canvas.width/2 - 50, 85);
-            context.lineTo(canvas.width/2 - 45, 105);
+            context.moveTo(canvas.width/2 - 6, canvas.height/2 - 34);
+            context.lineTo(canvas.width/2 - 21, canvas.height/2 - 47);
+            context.arc(canvas.width/2 - 21, canvas.height/2 - 47, r, 0, 2*Math.PI);
+
+           // 400 -225 = a^2
             context.stroke();
             context.closePath();
-            //Fourth row, second column
+
             context.beginPath();
-            context.arc(canvas.width/2 -10, 85, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 10, 85);
-            context.lineTo(canvas.width/2 - 6, 105); 
-            context.moveTo(canvas.width/2 -10, 85);
-            context.lineTo(canvas.width/2 -25, 105);
-            context.stroke();
-            context.closePath();
-            //Fourth row, third column
-            context.beginPath();
-            context.arc(canvas.width/2 + 10, 85, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 10, 85);
-            context.lineTo(canvas.width/2 + 6, 105); 
-            context.moveTo(canvas.width/2 + 10, 85);
-            context.lineTo(canvas.width/2 + 25, 105);
-            context.stroke();
-            context.closePath();
-            //Fourth row, fourth column
-            context.beginPath();
-            context.arc(canvas.width/2 + 50, 85, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 50, 85);
-            context.lineTo(canvas.width/2 + 90, 105);
-            context.moveTo(canvas.width/2 + 50, 85);
-            context.lineTo(canvas.width/2 + 45, 105);
-            context.stroke();
-            context.closePath();
-            //Fifth row, first column
-            context.beginPath();
-            context.arc(canvas.width/2 - 90, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 90, 105);
-            context.lineTo(canvas.width/2 - 125, 125);
-            context.moveTo(canvas.width/2 - 90, 105);
-            context.lineTo(canvas.width/2 - 100, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, second column
-            context.beginPath();
-            context.arc(canvas.width/2 - 45, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 45, 105);
-            context.lineTo(canvas.width/2 - 80, 125);
-            context.moveTo(canvas.width/2 - 45, 105);
-            context.lineTo(canvas.width/2 - 65, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, third column
-            context.beginPath();
-            context.arc(canvas.width/2 - 25, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 25, 105);
-            context.lineTo(canvas.width/2 - 35, 125);
-            context.moveTo(canvas.width/2 - 25, 105);
-            context.lineTo(canvas.width/2 - 50, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, fourth column
-            context.beginPath();
-            context.arc(canvas.width/2 - 6, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 - 6, 105);
-            context.lineTo(canvas.width/2 - 4, 125);
-            context.moveTo(canvas.width/2 - 6, 105);
-            context.lineTo(canvas.width/2 - 20, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, fifth column
-            context.beginPath();
-            context.arc(canvas.width/2 + 6, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 6, 105);
-            context.lineTo(canvas.width/2 + 4, 125);
-            context.moveTo(canvas.width/2 + 6, 105);
-            context.lineTo(canvas.width/2 + 20, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, sixth column
-            context.beginPath();
-            context.arc(canvas.width/2 + 25, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 25, 105);
-            context.lineTo(canvas.width/2 + 35, 125);
-            context.moveTo(canvas.width/2 + 25, 105);
-            context.lineTo(canvas.width/2 + 50, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, seventh column
-            context.beginPath();
-            context.arc(canvas.width/2 + 45, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 45, 105);
-            context.lineTo(canvas.width/2 + 80, 125);
-            context.moveTo(canvas.width/2 + 45, 105);
-            context.lineTo(canvas.width/2 + 65, 125);
-            context.stroke();
-            context.closePath();
-            //Fifth row, eighth column
-            context.beginPath();
-            context.arc(canvas.width/2 + 90, 105, r, 0, 2*Math.PI);
-            context.moveTo(canvas.width/2 + 90, 105);
-            context.lineTo(canvas.width/2 + 125, 125);
-            context.moveTo(canvas.width/2 + 90, 105);
-            context.lineTo(canvas.width/2 + 100, 125);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 - 125, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, second
-            context.beginPath();
-            context.arc(canvas.width/2 - 100, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, third
-            context.beginPath();
-            context.arc(canvas.width/2 - 80, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, fourth
-            context.beginPath();
-            context.arc(canvas.width/2 - 65, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, fifth
-            context.beginPath();
-            context.arc(canvas.width/2 - 50, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, sixth
-            context.beginPath();
-            context.arc(canvas.width/2 - 35, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, seventh
-            context.beginPath();
-            context.arc(canvas.width/2 - 20, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 - 4, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 4, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 20, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 35, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 50, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 65, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 80, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 100, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
-            //Sixth row, first
-            context.beginPath();
-            context.arc(canvas.width/2 + 125, 125, r, 0, 2*Math.PI);
-            context.stroke();
-            context.closePath();
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 - 20);
+            context.lineTo(canvas.width/2 - 35, canvas.height/2 -35);
+            context.arc(canvas.width/2 - 35, canvas.height/2 - 35, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 35, canvas.height/2 -35);
+            context.lineTo(canvas.width/2 - 35, canvas.height/2 -55);
+            context.arc(canvas.width/2 - 35, canvas.height/2 - 55, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 35, canvas.height/2 -35);
+            context.lineTo(canvas.width/2 - 55, canvas.height/2 -35);
+            context.arc(canvas.width/2 - 55, canvas.height/2 - 35, r, 0, 2*Math.PI);
+
             
+            context.stroke();
+            context.closePath();
+
+            //Left Up Left
+            context.beginPath();
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2);
+            context.lineTo(canvas.width/2 - 40, canvas.height/2);
+            context.arc(canvas.width/2 - 40, canvas.height/2, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 40, canvas.height/2);
+            context.lineTo(canvas.width/2 - 54, canvas.height/2 - 14);
+            context.arc(canvas.width/2 - 54, canvas.height/2 - 14, r, 0, 2*Math.PI);
+
+            context.stroke();
+            context.closePath();
+
+            // Left Up Left Lower-Left
+            context.beginPath()
+
+            context.moveTo(canvas.width/2 - 40, canvas.height/2);
+            context.lineTo(canvas.width/2 - 54, (canvas.height/2) + 14);
+            context.arc(canvas.width/2 - 54, canvas.height/2 + 14, r, 0, 2*Math.PI);
+
+
+            context.moveTo(canvas.width/2 - 54, canvas.height/2 +14);
+            context.lineTo(canvas.width/2 - 69, canvas.height/2 + 2);
+            context.arc(canvas.width/2 - 69, canvas.height/2 + 2, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 54, canvas.height/2 + 14);
+            context.lineTo(canvas.width/2 - 69, canvas.height/2 + 26);
+            context.arc(canvas.width/2 - 69, canvas.height/2 + 26, r, 0, 2*Math.PI);
+
+            context.stroke();
+            context.closePath();
+
+            //Left Down
+
+            // Down to the second node
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 - 20, canvas.height/2 + 40);
+            context.arc(canvas.width/2 - 20, canvas.height/2 +40, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 + 40);
+            context.lineTo(canvas.width/2 - 20, canvas.height/2 + 60);
+            context.arc(canvas.width/2 - 20, canvas.height/2 + 60, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 + 60);
+            context.lineTo(canvas.width/2 - 6, canvas.height/2 + 74);
+            context.arc(canvas.width/2 - 6, canvas.height/2 + 74, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 6, canvas.height/2 + 74);
+            context.lineTo(canvas.width/2 - 6, canvas.height/2 + 94);
+            context.arc(canvas.width/2 - 6, canvas.height/2 + 94, r, 0, 2*Math.PI);
+
+            context.stroke(); 
+            context.closePath();
+
+            // Lower-left curve
+            context.beginPath();
+            context.moveTo(canvas.width/2 - 6, canvas.height/2 + 74);
+            context.lineTo(canvas.width/2 - 21, canvas.height/2 + 87); // Mirror lower
+            context.arc(canvas.width/2 - 21, canvas.height/2 + 87, r, 0, 2*Math.PI);
+
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.moveTo(canvas.width/2 - 20, canvas.height/2 + 60); // Lower-left connection
+            context.lineTo(canvas.width/2 - 35, canvas.height/2 + 75);
+            context.arc(canvas.width/2 - 35, canvas.height/2 + 75, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 35, canvas.height/2 + 75);
+            context.lineTo(canvas.width/2 - 35, canvas.height/2 + 95); // Continue downward
+            context.arc(canvas.width/2 - 35, canvas.height/2 + 95, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 - 35, canvas.height/2 + 75);
+            context.lineTo(canvas.width/2 - 55, canvas.height/2 + 75); // Leftward movement
+            context.arc(canvas.width/2 - 55, canvas.height/2 + 75, r, 0, 2*Math.PI);
+
+            context.stroke();
+            context.closePath();
+
+
+
+
+
+
+            
+
+            // Right
+            context.beginPath();
+
+
+            context.moveTo(canvas.width/2, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 + 20, canvas.height/2 +20)
+            context.arc(canvas.width/2 + 20, canvas.height/2 + 20, r, 0, 2*Math.PI );
+
+            context.moveTo(canvas.width/2 + 20, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 + 20, canvas.height/2);
+            context.arc(canvas.width/2 + 20, canvas.height/2, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 20, canvas.height/2);
+            context.lineTo(canvas.width/2 + 20, canvas.height/2 - 20);
+            context.arc(canvas.width/2 + 20, canvas.height/2 - 20, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 20, canvas.height/2 - 20);
+            context.lineTo(canvas.width/2 + 6, canvas.height/2 - 34);
+            context.arc(canvas.width/2 + 6, canvas.height/2 - 34, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 6, canvas.height/2 - 34);
+            context.lineTo(canvas.width/2 + 6, canvas.height/2 - 54);
+            context.arc(canvas.width/2 + 6, canvas.height/2 - 54, r, 0, 2*Math.PI);
+
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.moveTo(canvas.width/2 + 6, canvas.height/2 - 34);
+            context.lineTo(canvas.width/2 + 21, canvas.height/2 - 47);
+            context.arc(canvas.width/2 + 21, canvas.height/2 - 47, r, 0, 2*Math.PI);
+
+           // 400 -225 = a^2
+            context.stroke();
+            context.closePath();
+
+            context.beginPath();
+            context.moveTo(canvas.width/2 + 20, canvas.height/2 - 20);
+            context.lineTo(canvas.width/2 + 35, canvas.height/2 -35);
+            context.arc(canvas.width/2 + 35, canvas.height/2 - 35, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 35, canvas.height/2 -35);
+            context.lineTo(canvas.width/2 + 35, canvas.height/2 -55);
+            context.arc(canvas.width/2 + 35, canvas.height/2 - 55, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 35, canvas.height/2 -35);
+            context.lineTo(canvas.width/2 + 55, canvas.height/2 -35);
+            context.arc(canvas.width/2 + 55, canvas.height/2 - 35, r, 0, 2*Math.PI);
+
+            
+            context.stroke();
+            context.closePath();
+
+             //Right Up Right
+             context.beginPath();
+
+             context.moveTo(canvas.width/2 + 20, canvas.height/2);
+             context.lineTo(canvas.width/2 + 40, canvas.height/2);
+             context.arc(canvas.width/2 + 40, canvas.height/2, r, 0, 2*Math.PI);
+ 
+             context.moveTo(canvas.width/2 + 40, canvas.height/2);
+             context.lineTo(canvas.width/2 + 54, canvas.height/2 - 14);
+             context.arc(canvas.width/2 + 54, canvas.height/2 - 14, r, 0, 2*Math.PI);
+ 
+             context.stroke();
+             context.closePath();
+ 
+             // Right Up Right Lower-Right
+             context.beginPath()
+ 
+             context.moveTo(canvas.width/2 + 40, canvas.height/2);
+             context.lineTo(canvas.width/2 + 54, (canvas.height/2) + 14);
+             context.arc(canvas.width/2 + 54, canvas.height/2 + 14, r, 0, 2*Math.PI);
+ 
+ 
+             context.moveTo(canvas.width/2 + 54, canvas.height/2 +14);
+             context.lineTo(canvas.width/2 + 69, canvas.height/2 + 2);
+             context.arc(canvas.width/2 + 69, canvas.height/2 + 2, r, 0, 2*Math.PI);
+ 
+             context.moveTo(canvas.width/2 + 54, canvas.height/2 + 14);
+             context.lineTo(canvas.width/2 + 69, canvas.height/2 + 26);
+             context.arc(canvas.width/2 + 69, canvas.height/2 + 26, r, 0, 2*Math.PI);
+ 
+             context.stroke();
+             context.closePath();
+          //   context.moveTo(canvas.width/2 - 6, canvas.height/2 - 34);
+
+            // Right Down
+            
+            context.beginPath();
+            context.moveTo(canvas.width/2 + 20, canvas.height/2 + 20);
+            context.lineTo(canvas.width/2 + 20, canvas.height/2 + 40);
+            context.arc(canvas.width/2 + 20, canvas.height/2 + 40, r, 0, 2*Math.PI);
+
+            context.moveTo(canvas.width/2 + 20, canvas.height/2 + 40);
+    context.lineTo(canvas.width/2 + 35, canvas.height/2 + 55);
+    context.arc(canvas.width/2 + 35, canvas.height/2 + 55, r, 0, 2*Math.PI);
+
+    context.moveTo(canvas.width/2 + 20, canvas.height/2 + 40);
+    context.lineTo(canvas.width/2 + 5, canvas.height/2 + 55);
+    context.arc(canvas.width/2 + 5, canvas.height/2 + 55, r, 0, 2*Math.PI);
+            context.stroke();
+            context.closePath();
+           //Right Down close
+          
+
+
+            
+
+           
+
+
+            //context.beginPath();
+
+            //for (let i; i<6; i++){
+              
+            //} 
+
+         
           };
 
         drawNodes(); //Call the drawNodes function when the component mounts

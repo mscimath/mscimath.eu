@@ -1,10 +1,10 @@
 .canvas-sandbox {
-    height: 80vh;
+    height: 800px;
     width: 46vw; /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
     border: 12px solid rgba(255, 192, 203, 0.2);
     border-radius: 2%;
     margin: 0;
-    background-color: rgba(255, 192, 203, 0.05);
+    background-color: rgba(255, 192, 203, 0.526);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter:blur(5px);
     box-shadow: inset 5px 5px 5px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 1px 1px rgba(225, 225, 225, 0.4);

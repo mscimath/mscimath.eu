@@ -23,6 +23,10 @@
     font-size: 1.5rem;
 }
 
+#root {
+    background-color: rgba(139, 155, 169, 0.237);
+}
+
 /*Home Menu Individual Buttons*/
 .menu-buttons {
     font-family: "SUSE", sans-serif;
@@ -55,10 +59,10 @@
 
 @media only screen and (max-width: 445px) {
     .menu-button a{
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       #menu-buttons-container {
-        margin: 3vh;
+        margin: 2vh;
     
       }
     
@@ -66,26 +70,50 @@
 
 @media only screen and (min-width: 445px) {
     .menu-button a {
-        font-size: 2rem;
+        font-size: 1.7rem;
     } 
     #menu-buttons-container {
-        margin: 3vh;
+        margin: 2vh;
     
       }
 }
 
 @media only screen and (min-width: 845px) {
     .menu-button a {
-        font-size: 2.5rem;
+        font-size: 2rem;
     } 
     .menu-button {
         margin: 0.6rem;
     }
     #menu-buttons-container {
-        margin: 10vh;
+        margin: 5vh;
     
       }
 }
 
+@media only screen and (min-width: 1200px) {
+    .menu-button a {
+        font-size: 2.2rem;
+    } 
+    .menu-button {
+        margin: 0.8rem;
+    }
+    #menu-buttons-container {
+        margin: 5vh;
+    
+      }
+}
 
+@media only screen and (min-width: 1845px) {
+    .menu-button a {
+        font-size: 3rem;
+    } 
+    .menu-button {
+        margin: 1rem;
+    }
+    #menu-buttons-container {
+        margin: 6vh;
+    
+      }
+}
 
