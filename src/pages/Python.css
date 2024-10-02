@@ -1,7 +1,3 @@
-#resources {
-    
-}
-
 .accordion-container {
     width: 100%;
 }
@@ -9,4 +5,11 @@
 .accordion-main > .accordion-title {
     background-color: rgba(245, 245, 245, 0.2);
 
+}
+
+.tile-grid {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
 }

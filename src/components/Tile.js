@@ -7,9 +7,11 @@ export default function Tile({ title, description, pdfUrl }) {
             <div className="tile-content">
                 <h3>{title}</h3>
                 <p>{description}</p>
+                <div>
                 <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
                     View PDF
                 </a>
+                </div>
             </div>
         </div>
     );
