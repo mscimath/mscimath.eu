@@ -33,9 +33,10 @@ export default function Python(){
         <>
         <section>
             <h2>Python</h2>
-            <div className="section-menu">
-                <a href="#/python#resources" onClick={() => handleScrollTo('resources')}>Learning Resources</a>
-                <a href="#/python#blog" onClick={() => handleScrollTo('blog')}>Python Blog</a>
+            <div className="section-menu" id="section-menu">
+                <div className="section-menu-item"><a href="#/python#resources" onClick={() => handleScrollTo('resources')}>Learning Resources</a></div>
+                <div className="section-menu-item"><a href="#/python#data-science" onClick={() => handleScrollTo('data-science')}>Data Science</a></div>
+                <div className="section-menu-item"><a href="#/python#blog" onClick={() => handleScrollTo('blog')}>Python Blog</a></div>
             </div>
         </section>
         <section id="resources">
@@ -106,6 +107,9 @@ export default function Python(){
          }
         />
         </div>
+        </section>
+        <section id="data-science">
+
         </section>
 
         </>
