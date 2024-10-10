@@ -1,2 +1,42 @@
-.blog {background: rgba(116, 116, 116, 0.4);
-  backdrop-filter: blur(15px);}
+.blog {
+  background: rgba(116, 116, 116, 0.4);
+  backdrop-filter: blur(15px);
+  position: relative;
+  max-width: 80vw;
+  max-height: 90vw;
+  overflow-y: hidden;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+/* The container for stacking images */
+.blog-img-container {
+  position: relative;
+  width: 90%; 
+  height: 70%; 
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blog-img {
+  position: relative;
+  display: inline-block;
+  max-height: 50vh;
+  max-width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Shift each blog down and slightly to the right */
+.blog-img:nth-child(2){
+  transform: translateX(20px);
+}
+
+.blog-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+
+}
+

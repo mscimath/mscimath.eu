@@ -189,7 +189,7 @@
                 {"line": "Today we will try to understand the operation of Feedforward neural networks, by constructing a simple example of such a network in Python.", "code": false},
                 {"line": "Even though Machine Learning's mathematical engine is a complex concept to comprehend, in today's example only the ability to multiply matrices is required to grasp the idea.", "code": false},
                 {"line": "If you ever want to go into Machine Learning industry, learning statistics would be a wise choice for setting your knowlege base as a neural network is a statistical computational model. You can think of it as a system of neurons connected by synapses that send impulses (data) to each other. Data travels across these synapses - from one layer to another. A simple neural network is build upon three layers: the input layer, the hidden layer, and the output layer, as shown below, on the Diagram.", "code": false},
-                {"line": "Layers Diagram", "code": false, "image": true, "image_id": 4.0},
+                {"line": "Layers Diagram", "code": false, "image": true, "src":[]},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
@@ -214,9 +214,9 @@
             "id": 5
         },
         {
-            "postTitle": "",
+            "postTitle": "SQL Cheatsheet",
             "postLines": [
-                {"line": "", "code": false},
+                {"line": "", "code": false, "image": true, "src" : ["/pdfs/SQL_Queries_0.jpg", "/pdfs/SQL_Queries_1.jpg"]},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
