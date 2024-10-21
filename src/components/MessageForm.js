@@ -31,10 +31,10 @@ const MessageForm = () => {
                 const data = await response.json();
                 console.log('Email sent:', data);
             } else {
-                console.error('Failed to send email.');
+                console.error('Failed to send email.', response.statusText);
             }
         } catch (error) {
-            console.error('Error sending email:', response.statusText);
+            console.error('Error sending email:', error);
         }
     };
 
