@@ -12,7 +12,7 @@ const MessageForm = () => {
         try {
             //Make an API call to the backend to send email
             text = from + ": " + text
-            const response = await fetch('http://localhost:3001/send-email', {
+            const response = await fetch('https://27c262ee-b7bd-418f-a884-a006780189a5-00-3sxd9pjuy0fy7.picard.replit.dev/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,12 +28,13 @@ const MessageForm = () => {
             });
 
             if (response.ok) {
-                console.log('Email sent successfully!');
+                const data = await response.json();
+                console.log('Email sent:', data);
             } else {
                 console.error('Failed to send email.');
             }
         } catch (error) {
-            console.error('Error sending email:', error);
+            console.error('Error sending email:', response.statusText);
         }
     };
 
