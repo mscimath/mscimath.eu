@@ -4,13 +4,14 @@ import './MessageForm.css'
 const MessageForm = () => {
     const [from, setFrom] = useState('');
     const [subject, setSubject] = useState('');
-    const [text, setText] = useState('');
+    let [text, setText] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             //Make an API call to the backend to send email
+            text = from + ": " + text
             const response = await fetch('http://localhost:3001/send-email', {
                 method: 'POST',
                 headers: {
