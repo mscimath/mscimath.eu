@@ -2,22 +2,31 @@
     width: 70vw;
     display: flex;
     flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 #contact-form > .form-item {
     margin-bottom: 1rem;
-    border: 1px solid black;
     padding: 0.5rem 0;
 }
 
 #contact-form > .form-item input,
 #contact-form > .form-item textarea,
 #contact-form > .form-item button {
-    background-color: rgba(255, 255, 0, 0.6);
+    background-color: var(--dark);
     backdrop-filter: blur(5px);
-    color: var(--dark);
+    color: var(--light);
     padding: 0.7em 1.2em;
-    border: 1px solid #aaa;
-    outline-color: #ddd;
+    border: 1px solid rgba(255, 255, 0, 0.1);
+    box-shadow: 0px 0px 4px rgba(255, 255, 0, 0.6);
+}
+
+#contact-form > .form-item input:focus,
+#contact-form > .form-item textarea:focus {
+    outline: none; /*Remove default focus outline */
+    border-color: rgba(255, 255, 0, 0.6); 
+    box-shadow: 0px 0px 4px rgba(255, 255, 0, 0.5), inset 0 0 2px rgba(255, 255, 0, 0.4);
 }
 
 #contact-form > .form-item label {

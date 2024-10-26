@@ -1,10 +1,10 @@
-import logo from '../img/MSlogoXSDF.png';
+import logo from '../img/logo_dark.png';
 import './Header.css';
 import { HashLink } from 'react-router-hash-link';
 
 export default function Header(props){
     return (
-        
+
         <header className="main-header" id ="main-header">
             <div className="top-header" id="top-header">
                 <div className="logo">
@@ -33,7 +33,7 @@ export default function Header(props){
             </div>
         </header>
     )
-    
+
 }
 
 <nav className="nav">

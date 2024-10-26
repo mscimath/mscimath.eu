@@ -12,6 +12,7 @@ import HeaderCollapsable from './components/HeaderCollapsable';
 import Blog from './components/Blog';
 import data from './blogData.json';
 import CodeCss from './components/CodeBlog.css';
+import Pages from './pages/Pages.css'
 import MessageForm from './components/MessageForm';
 
 export default function App() {

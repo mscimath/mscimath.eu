@@ -41,8 +41,11 @@ export default function Python(){
         </section>
         <section id="resources">
         {/* Main Accordion for Basics */}
-        <div className="accordion-container">
-        <Accordion title="Python-Basics" className="accordion-main" content={
+        <div id="accordion-container" className="accordion-container">
+        <Accordion 
+            title="Python-Basics" 
+            className="accordion-main" 
+            content={
             <>
                 {/* Sub-Accordion: Syntax */}
                 <Accordion title="Python-Syntax" content={
@@ -92,8 +95,9 @@ export default function Python(){
                     }
                 />
 
-            </>
-        }
+            </>  
+        } 
+        defaultOpen={true}
         />
 
         {/* Main Accordion for Intermediate */}
