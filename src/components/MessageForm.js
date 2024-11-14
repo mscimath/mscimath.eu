@@ -14,7 +14,7 @@ const MessageForm = () => {
 
         try {
             //Make an API call to the backend to send email
-            const response = await fetch('https://email-service-7n8w.onrender.com', {
+            const response = await fetch('https://email-service-7n8w.onrender.com/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
