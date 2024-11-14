@@ -70,7 +70,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const allowedOrigins = ['http://mscimath.eu', 'https://another-allowed-domain.com', 'https://mscimath.eu'];
+const allowedOrigins = ['http://mscimath.eu', 'https://another-allowed-domain.com', 'https://mscimath.eu', 'http://localhost:3000'];
  
 // Enable CORS for all routes
 app.use(cors({

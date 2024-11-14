@@ -14,7 +14,7 @@ const MessageForm = () => {
 
         try {
             //Make an API call to the backend to send email
-            const response = await fetch('https://27c262ee-b7bd-418f-a884-a006780189a5-00-3sxd9pjuy0fy7.picard.replit.dev/send-email', {
+            const response = await fetch('https://email-service-7n8w.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
