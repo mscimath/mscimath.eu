@@ -252,7 +252,7 @@
                 {"line": " experience: '1'}", "code": true}
             ],
             "postTags": "object, Object.assign(), copying objects",
-            "id": 1
+            "id": 1 
         },
         {
             "postTitle": "The switch statement.",

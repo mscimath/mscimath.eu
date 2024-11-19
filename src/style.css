@@ -456,15 +456,74 @@ input[type="text"] {
 .blog {
   width: auto;
   color:rgb(220, 219, 219);
+  overflow: hidden;
   border-radius: 2px;
   padding: 3vw;
   margin: 5vw;
   overflow-x: visible;
   text-align: left;
+  position: relative; /**/
 }
 
 .blog .post-body, .post-body pre, .post-body p, .blog-post-footer h5 {
   width: auto;
+}
+
+/* Post Body - Collapsible Content */
+.post-body {
+  max-height: 6em; /* Restrict height for collapsed state */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.post-body.expanded {
+  max-height: 100vh; /* Allow full content when expanded */
+}
+
+.post-body.collapsed {
+  max-height: 6em; /* Limit visible content for collapsed posts */
+}
+
+/* Expand Button - Triangle Style */
+.expand-btn {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 3px; /* Position at the bottom-right corner */
+  right: 3px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid #333; /* Triangle pointing down */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.expand-btn::before {
+    content: "...";
+    color: white;
+    font-weight: 700;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 20px;
+    left: -23px;
+    transition: content 0.3s ease;
+    z-index: 3;
+}
+
+/*.expand-btn.expanded {
+  border-bottom: none;
+  border-top: 40px solid #333;
+}*/
+
+.expand-btn.expanded::before {
+    content: '↑';
+    top: 20px;
+    left: -18px
+}
+
+.expand-btn:hover {
+  transform: scale(1.1);
 }
 
 .blog > .post-title {
@@ -501,6 +560,8 @@ input[type="text"] {
   border-spacing: 30px 10px;
   border-collapse: separate;
 }
+
+
 
 .blog-post-footer {
   padding: 1rem;

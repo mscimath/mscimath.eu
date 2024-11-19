@@ -21,9 +21,9 @@
   .menu {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     padding: 0 6px;
-    align-items: center;
     margin-bottom: 10px;
     max-height: 0;
     opacity: 0;
@@ -70,14 +70,14 @@
   .cross #lineThree {
     transform: scale(0);
   }
-
-  
   
   .menu .menu-item {
     width:auto;
     margin-right: 2vw;
     position: relative;
-    padding-bottom: 2px;
+    padding: 10px 0 6px 0;
+    line-height: 1.5;
+    vertical-align: middle;
   }
   
   .menu .menu-item a:hover {
@@ -93,7 +93,7 @@
    /*Logo */
 .logo {
   display: block;
-  width: 70px;
+  width: 50px;
   height: auto;
   align-items: center;
   margin-top: auto;
@@ -106,6 +106,42 @@
   align-self: center;
 }
 
+.up {
+  font-size: 1.2rem;
+}
+
+
+.menu-item.up {
+  position: fixed; /* Keeps it always visible in the viewport */
+  bottom: 20px;    /* Distance from the bottom of the screen */
+  right: 20px;     /* Distance from the right side of the screen */
+  z-index: 1000;   /* Ensures it’s above most elements */
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.6); /* Add a subtle background */
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item.up:hover {
+  background: rgba(0, 0, 0, 0.8); /* Slightly darker on hover */
+}
+
+.menu-item.up.visible {
+  opacity: 1; /* Make it visible */
+  transform: scale(1); /* Reset scale if any animation is applied */
+}
+
+.menu-item.up.hidden {
+  opacity: 0; /* Hide it */
+  transform: scale(0.9); /* Slightly shrink when hidden */
+}
+
+
 @media screen and (max-width: 768px) {
     
   #main-header {
@@ -113,8 +149,6 @@
     width: 100%;
 
   }
-
-  
 
   .menu {
     flex-direction: row;

@@ -24,19 +24,16 @@ export default function Physics(){
             <div className='section-paragraph'>
             <p>
                 <h4>Angular speed</h4>
-                Związek pomiędzy wartością kąta  θ  a promieniem okręgu i długością łuku wyraża się wzorem: <br/>
+                The relation between value of the angle θ between the radius of the circle and the length of the arc is expressed by the formula: <br/>
                 θ=s/r<br/>
-                Wartość wektora prędkości kątowej (ang. angular velocity), oznaczona jako  ω
- , jest szybkością zmian kąta  θ
- , gdy cząstka porusza się po łuku. Chwilowa wartość prędkości kątowej (ang. instantaneous angular velocity) jest definiowana jako granica, przy  Δt→0
- , średniej prędkości kątowej  ω–=Δθ/Δt
- <br/>
- Jednostką prędkości kątowej jest radian na sekundę (rad/s). Prędkość kątową możemy w prosty sposób powiązać z częstotliwością  f
-  (zwaną też prędkością obrotową), wyrażaną w obrotach na sekundę (obr/s). Aby wyznaczyć prędkość kątową, musimy pomnożyć liczbę obrotów na sekundę przez  2π
- , ponieważ jeden pełny obrót oznacza przemieszczenie kątowe równe  2π
-  radianów:
-
-ω=2πf.<br/> 
+                The value of the angular velocity, denoted as ω, is the rate of change of angle θ as
+                the particle moves along the arc. The instantaneous angular velocity value is defined
+                as the limit, at Δt→0, of the avarage angular velocity ω–=Δθ/Δt<br/>
+                The unit of angular velocity is the radian per second (rad/s). 
+                We can easily relate angular velocity to frequency f (also known as rotational speed), 
+                expressed in revolutions per second (rpm/s). To determine the angular velocity, 
+                we need to multiply the number of revolutions per second by 2π, because one complete 
+                revolution represents an angular displacement of 2π radians: ω=2πf.<br/> 
 
             </p>
             </div>

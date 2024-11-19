@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from '../img/logo_dark.png';
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -6,16 +6,39 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function HeaderCollapsable(props) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showArrow, setShowArrow] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const handleArrow = () => {
+        console.log("Scroll event detected");
+        // Show up arrow when scrolled halfway through the page 
+        /*
+        const halfwayPoint = document.documentElement.scrollHeight / 2;
+        console.log('ScrooY:', window.scrollY, 'Halfway Point:', halfwayPoint);
+        if (window.scrollY > halfwayPoint) {
+            setShowArrow(true);
+        } else {
+            setShowArrow(false);
+        }*/
+    };
+
+    useEffect(() => {
+        console.log("Component mounted, adding scroll event listener");
+
+        window.addEventListener('scroll', handleArrow);
+        return () => {
+            window.removeEventListener('scroll', handleArrow);
+        };
+    }, []);
+
     return (
         <header className={`main-header ${menuOpen ? 'menu-open' : ''}`} id="main-header">
             <div className='top-header' id="top-header">
                 <div className="logo">
-                    <Link href="/home">
+                    <Link to="/#home">
                         <img src={logo} alt="home"/>
                     </Link>
                 </div>
@@ -46,6 +69,10 @@ export default function HeaderCollapsable(props) {
                     <div id='lineThree'></div>
                 </button>
             </div>
+            {/* Consitionally render the arrow */}
+            {showArrow && (
+                        <div className='menu-item smooth-link up'><HashLink smooth to='#home' >↑</HashLink></div>
+                )}
         </header>
     )
 }
