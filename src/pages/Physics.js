@@ -1,10 +1,12 @@
 import './Canvas.css';
 import Atom from './physics_canvas/Atom';
+import SliderImage from '../components/SliderImage';
 
 export default function Physics(){
     
 
     return (
+        <>
         <section>
             <h2 className='section-title'>Physics</h2>
             <div className='section-paragraph'>
@@ -46,5 +48,9 @@ export default function Physics(){
                 </div>
             </div>
         </section>
+        <section className='particles-section'>
+            <SliderImage />
+        </section>
+        </>
     )
 }

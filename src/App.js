@@ -14,6 +14,7 @@ import data from './blogData.json';
 import CodeCss from './components/CodeBlog.css';
 import Pages from './pages/Pages.css'
 import MessageForm from './components/MessageForm';
+import SliderImage from './components/SliderImage';
 
 export default function App() {
   const javascriptPosts = data[0].javascript;
@@ -37,7 +38,7 @@ export default function App() {
       <Router>
       
       <HeaderCollapsable />
-      
+      <SliderImage />
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/home' element = {<Home />} />

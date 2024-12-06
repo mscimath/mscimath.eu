@@ -13,7 +13,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+ /* overflow-x: hidden;*/
 }
 
 html {
@@ -388,10 +388,10 @@ section .section-footer {
 }
 
 /*Load Items onScroll*/
-.reveal {
+.blog .reveal {
   opacity: 0;
   transition: all 0.7s ease-in-out;
-  overflow-x: visible;
+  overflow: visible;
 
 }
 .reveal.active {
@@ -403,13 +403,13 @@ section .section-footer {
   max-width: 100%;
   /* max-width: 700px;*/
   margin: 10px auto;
-  overflow-x: visible;
+  overflow: visible;
 }
 .search-container {
   width: auto;
   padding: 2vw;
   margin: 0 2vw;
-  overflow-x: visible;
+  overflow: visible;
   position: relative;
 }
 
@@ -440,6 +440,7 @@ input[type="text"] {
 .blogs{
   width: auto;
   position: relative;
+  overflow: visible;
 }
 
 /* Blog Section Background */
@@ -454,19 +455,41 @@ input[type="text"] {
 }
 
 .blog {
-  width: auto;
-  color:rgb(220, 219, 219);
-  overflow: hidden;
-  border-radius: 2px;
-  padding: 3vw;
-  margin: 5vw;
-  overflow-x: visible;
-  text-align: left;
   position: relative; /**/
+  width: auto;
+  padding: 3vw;
+  margin: 5vw auto;
+  overflow: hidden;
+  text-align: left;
+  color:rgb(220, 219, 219);
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.blog .post-body, .post-body pre, .post-body p, .blog-post-footer h5 {
+.blog .post-body.expanded {
+  max-height: none; /* Fully expand */
+  overflow: visible; /* Ensure all content is shown */
+}
+
+.blog.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.blog, .post-body p, .blog-post-footer h5 {
   width: auto;
+  height: auto;
+}
+
+.post-body pre, .post-body .blog-paragraph {
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.blog-img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* Post Body - Collapsible Content */
@@ -477,7 +500,8 @@ input[type="text"] {
 }
 
 .post-body.expanded {
-  max-height: 100vh; /* Allow full content when expanded */
+  max-height: none; /* Allow full content when expanded */
+  overflow: visible;
 }
 
 .post-body.collapsed {
@@ -551,7 +575,6 @@ input[type="text"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-x: visible;
 }
 .blog-content table {
   display: block;
@@ -614,8 +637,8 @@ input[type="text"] {
 .blog pre {
   text-align: left;
   overflow-x: visible;
-
 }
+
 .hidden {
   display: none;
 }
