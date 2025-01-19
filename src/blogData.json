@@ -2,6 +2,12 @@
   {
     "general" : [
         {
+            "postTitle": "",
+            "postLines": [
+                {"line": ""}
+            ]
+        },
+        {
             "postTitle": "How Programming Supports Learning Mathematics and Physics?",
             "postLines": [
                 {"line": "Mathematics and physics are disciplines deeply rooted in calculations and modeling. Over the yars, programming has revolutionized the way we approach problems in these fields, making processes more efficient and accurate. In this article, you'll discover:", "code": false, "subtitle": false},
@@ -771,6 +777,54 @@
             "id": 0.03
         },
         {
+            "postTitle": "Understanding Entity-Relationship (ER) Models and Their Attributes",
+            "postLines": [
+                {"line": "Entity-Relationship (ER) modeling is a fundamental technique used in database design to visually represent data and its relationships within a system. ER models use a graphical approach to depict entities (objects or concepts) and their relationships, making it easier to design and understand the structure of databases. The key components of an ER model are entities, relationships, and attributes. Among these, attributes play a crucial role in defining the properties and characteristics of entities and relationships."},
+                {"line": "This article explores the different types of attributes in ER models, heighlighting their roles and significance."},
+                {"line": "What Are Attributes in ER Models?", "code": false, "subtitle": true},
+                {"line": "Attributes describe the properties or in other words characteristics of an entity or a relationship in an ER model. For example, in a database representing a library, an entity like \"Book\" may have attributes such as \"Title\", \"Author\", and \"ISBN\". Attributes provide detailed information about entities and relationships, enabling better data organization and retrieval.", "code": false, "subtitle": true},
+                {"line": "Attributes can be categorized into various types based on their nature and usage. Below you will find the primary types of attributes used in ER modeling:", "code": false, "subtitle": false},
+                {"line": "1. Simple Attributes", "code":false, "subtitle": true},
+                {"line": "Simple attributes are atomic, indivisible properties. They hold single values and cannot be broken down further. For example:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"First Name\" and \"Last Name\" of a \"Student\" entity.", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Price\" of a \"Product\" entity.", "code": false, "subtitle": false},
+                {"line": "Simple attributes are straightforward and are the most commonly used type of attributes.", "code": false, "subtitle": false},
+                {"line": "2. Composite Attributes", "code": false, "subtitle": true},
+                {"line": "Composite attributes are more complex than simple attributes by one level. These consist of multiple components that can be divided into smaller sub-parts, each of which holds meaningful information. As example we can list:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Full Name\" can be divided into \"First Name\" and \"Last Name\"."},
+                {"line": "\t ⸰ \"Address\" can be further subdivided into \"Street\", \"City\", \"State\", and \"Postal Code\".", "code": false, "subtitle": false},
+                {"line": "Composite attributes provide flexibility in data representation, allowing users to store both detailed and summarized data.", "code": false, "subtitle": false},
+                {"line": "3. Single-Valued Attributes", "code": false, "subtitle": true},
+                {"line": "Single-valued attributes hold only one value for a given entity instance. For example:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Age\" of a \"Person\" entity.", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Registration Number\" of a \"Vehicle\" entity.", "code": false, "subtitle": false},
+                {"line": "These attributes are ideal for properties that naturally have only one value at a time.", "code": false, "subtitle": false},
+                {"line": "4. Multi-Valued Attributes", "code": false, "subtitle": true},
+                {"line": "These can hold multiple values for a single entity instance of a database. They may be for example:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Phone Numbers\" of an \"Employee\" entity.", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Email Addresses\" of a \"Customer\" entity.", "code": false, "subtitle": false},
+                {"line": "In ER models, multi-valued attributes are often represented using double ovals. They may need to be normalized during database design to create separate entities or tables for better organization.", "code": false, "subtitle": false},
+                {"line": "5. Derived Attributes", "code": false, "subtitle": true},
+                {"line": "Derived attributes are not stored directly in the database but are calculated based on other stored attributes. As examples we can name:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Age\" can be derived from the \"Date of Birth\".", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Total Price\" can be calculated using \"Quantity\" and \"Unit Price\".", "code": false, "subtitle": false},
+                {"line": "Derived attributes reduce redundancy and ensure consistency by relying on existing data for computation.", "code": false, "subtitle": false},
+                {"line": "6. Key Attributes", "code": false, "subtitle": true} ,
+                {"line": "Key attributes are unique identifiers for entity instances. These attributes ensure that each instance can be distinctly identified within the database. For example:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Student ID\" for a \"Student\" entity."},
+                {"line": "\"ISBN\" for a \"Book\" entity.", "code": false, "subtitle": false},
+                {"line": "Key attributes are essential for establishing relationships between entities and maintaining data integrity.", "code": false, "subtitle": false},
+                {"line": "7. Optional (or Null) Attributes", "code": false, "subtitle": true},
+                {"line": "Optional attributes are those that may or not hold a value for a specific entity instance. For example:", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Middle Name\" of a \"Person\" entity might be optional.", "code": false, "subtitle": false},
+                {"line": "\t ⸰ \"Discount\" on a \"Product\" might be optional.", "code": false, "subtitle": false},
+                {"line": "Optional attributes add flexibility to the database schema by accommodationg incomplete or optional data.", "code": false, "subtitle": false},
+                {"line": "Conclusion", "code": false, "subtitle": true},
+                {"line": "Attributes in ER models play a vital role in defining the characteristics of entities and relationships, enabling comprehensive database designs. By understanding the various types of attributes - such as simple, composite, single-valued, multi-valued, derived, key, and optional - database designers can create more efficient, flexible, and scalable systems. Choosing the right attributes and organizing them effectively ensures that the database meets the requirements of the system it represents.", "code": false, "subtitle": false}
+            ],
+            "postTags": "Data Science, Data Bases, ER models, attributes"
+        },
+        {
             "postTitle": "Hierarchical Algorithms - Agglomerative Clustering",
             "postLines": [
                 {"line": "Agglomerative clustering is a bottom-up hierarchical clustering algorithm. It starts with each data point as a separate cluster and then iteratively merges the closest pairs of clusters until only one cluster remains or a stopping criterion is met.", "code": false},
@@ -1064,6 +1118,76 @@
             ],
             "postTags": "",
             "id": 2.2
+        }
+    ],
+    "physics_particle" : [
+        {
+            "postTitle": "PyGym Exercise 2.2",
+            "postLines": [
+                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
+                {"line": "Examplary execution:", "code": false},
+                {"line": "Give your name:", "code": false},
+                {"line": "Johnny", "code": false},
+                {"line": "Enter year of birth:", "code": false},
+                {"line": "1989", "code": false},
+                {"line": "John, you are 30 years old.", "code": false}
+            ],
+            "postTags": "",
+            "id": 0.0
+        },
+        {
+            "postTitle": "PyGym Exercise 2.2",
+            "postLines": [
+                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
+                {"line": "Examplary execution:", "code": false},
+                {"line": "Give your name:", "code": false},
+                {"line": "Johnny", "code": false},
+                {"line": "Enter year of birth:", "code": false},
+                {"line": "1989", "code": false},
+                {"line": "John, you are 30 years old.", "code": false}
+            ],
+            "postTags": "",
+            "id": 0.1
+        },{
+            "postTitle": "PyGym Exercise 2.2",
+            "postLines": [
+                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
+                {"line": "Examplary execution:", "code": false},
+                {"line": "Give your name:", "code": false},
+                {"line": "Johnny", "code": false},
+                {"line": "Enter year of birth:", "code": false},
+                {"line": "1989", "code": false},
+                {"line": "John, you are 30 years old.", "code": false}
+            ],
+            "postTags": "",
+            "id": 0.2
+        },{
+            "postTitle": "PyGym Exercise 2.2",
+            "postLines": [
+                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
+                {"line": "Examplary execution:", "code": false},
+                {"line": "Give your name:", "code": false},
+                {"line": "Johnny", "code": false},
+                {"line": "Enter year of birth:", "code": false},
+                {"line": "1989", "code": false},
+                {"line": "John, you are 30 years old.", "code": false}
+            ],
+            "postTags": "",
+            "id": 0.3
+        },
+        {
+            "postTitle": "PyGym Exercise 2.2",
+            "postLines": [
+                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
+                {"line": "Examplary execution:", "code": false},
+                {"line": "Give your name:", "code": false},
+                {"line": "Johnny", "code": false},
+                {"line": "Enter year of birth:", "code": false},
+                {"line": "1989", "code": false},
+                {"line": "John, you are 30 years old.", "code": false}
+            ],
+            "postTags": "",
+            "id": 0.4
         }
     ],
     "pentesting" : [

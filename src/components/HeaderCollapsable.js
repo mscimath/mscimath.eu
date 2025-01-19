@@ -49,9 +49,10 @@ export default function HeaderCollapsable(props) {
                         </HashLink>
                         <table className="nav_list_drop" id="subjects-drop">
                         <tbody>
-                            <tr><th rowSpan="2">Physics</th><td><Link to="/physics">School Physics</Link></td></tr>
+                            <tr><th rowSpan="3">Physics</th><td><Link to="/physics">General Physics</Link></td></tr>
                             <tr><td><Link to="/relativity">Relativity</Link></td></tr>
-                            <tr><th>Mathematics</th><td><Link to="/mathematics">School Mathematics Subjects</Link></td> </tr>
+                            <tr><td><Link to ="physics_particle">Particles</Link></td></tr>
+                            <tr><th>Mathematics</th><td><Link to="/mathematics">General Mathematics</Link></td> </tr>
                             <tr><th rowSpan="4">Computer Science & Programming</th><td><Link to="/javascript">JavaScript</Link></td></tr>
                             <tr><td><Link to="/python">Python</Link></td></tr>
                             <tr><td><HashLink to="/cpp">C++</HashLink></td></tr>

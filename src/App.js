@@ -3,6 +3,7 @@ import {HashRouter as Router, Routes, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import JavaScript from './pages/JavaScript';
 import Physics from './pages/Physics';
+import PhysicsParticles from './pages/PhysicsParticles'
 import Mathematics from './pages/Mathematics';
 import Python from './pages/Python';
 import Cpp from './pages/Cpp';
@@ -14,7 +15,6 @@ import data from './blogData.json';
 import CodeCss from './components/CodeBlog.css';
 import Pages from './pages/Pages.css'
 import MessageForm from './components/MessageForm';
-import SliderImage from './components/SliderImage';
 
 export default function App() {
   const javascriptPosts = data[0].javascript;
@@ -23,6 +23,7 @@ export default function App() {
   const datasciencePosts = data[0].data_science;
   const generalPosts = data[0].general;
   const physicsPosts = data[0].physics;
+  const particlesPosts = data[0].physics_particle;
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -38,12 +39,12 @@ export default function App() {
       <Router>
       
       <HeaderCollapsable />
-      <SliderImage />
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/home' element = {<Home />} />
           <Route path='/javascript' element = {<JavaScript />} />
           <Route path='/physics' element = {<Physics />} />
+          <Route path='/physics_particle' element = {<PhysicsParticles/>} />
           <Route path='/python' element = {<Python />} />
           <Route path='/cpp' element = {<Cpp />} />
           <Route path='/mathematics' element={<Mathematics/>} />
@@ -71,6 +72,7 @@ export default function App() {
               <Route path='/cpp' element = { <Blog style={CodeCss} input={searchInput} posts={cppPosts} /> } />
               <Route path='/data_science' element = { <Blog style={CodeCss} input={searchInput} posts = {datasciencePosts} /> } />
               <Route path='/physics' element = { <Blog input={searchInput} posts = {physicsPosts} /> } />
+              <Route path='/physics_particle' element = { <Blog input={searchInput} posts = {particlesPosts} /> } />
             </Routes>
             
           </div>

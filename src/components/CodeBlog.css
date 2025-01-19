@@ -10,7 +10,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
-
+.blog .post-body {
+  background: rgba(52, 70, 89, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 1.5rem 2rem;
+}
 
 /* The container for stacking images */
 .blog-img-container {
