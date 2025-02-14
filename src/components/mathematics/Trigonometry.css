@@ -1,0 +1,108 @@
+.trigonometry-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.trig-circle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.circle-cont-right {
+    color: navy;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.section-description{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+
+.section-description h3 {
+    display: inline-block;
+    width: auto;
+    margin: 0rem 1.5rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid navy;
+}
+
+.section-description p {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.trig-circle {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.trig-controls {
+    color: navy;
+    width: 100%;
+    max-width: 300px;
+}
+
+.trig-values {
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.trig-maths-container {
+    color: navy;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+}
+
+.trig-formulas {
+    padding: 1rem;
+}
+
+.formula-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: navy;
+}
+
+.formula-grid {
+    text-align: left;
+
+}
+
+.solution-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.solution-button:hover {
+    background-color: #1d4ed8;
+}
+
+.practice-problems {
+    padding: 1rem;
+    max-width: 60%;
+}
+
+.practice-problems .problem-text, .problem p {
+    text-align: left;
+
+}
+
+.practice-problems .problem-text {
+    font-size: 0.8rem;
+}

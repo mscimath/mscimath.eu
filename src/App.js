@@ -22,6 +22,7 @@ export default function App() {
   const cppPosts = data[0].cpp;
   const datasciencePosts = data[0].data_science;
   const generalPosts = data[0].general;
+  const mathematicsPosts = data[0].mathematics;
   const physicsPosts = data[0].physics;
   const particlesPosts = data[0].physics_particle;
 
@@ -65,12 +66,13 @@ export default function App() {
             </div>    
             
             <Routes>
-              <Route path="/" element = {<Blog  input={searchInput} posts={generalPosts}/>}></Route>
-              <Route path="/home" element = {<Blog  input={searchInput} posts={generalPosts}/>}></Route>
+              <Route path="/" element = {<Blog  style={CodeCss} input={searchInput} posts={generalPosts}/>}></Route>
+              <Route path="/home" element = {<Blog  style={CodeCss} input={searchInput} posts={generalPosts}/>}></Route>
               <Route path='/javascript' element = {<Blog style={CodeCss} input={searchInput} posts={javascriptPosts}/>}/>
               <Route path='/python' element = { <Blog style={CodeCss} input={searchInput} posts={pythonPosts}/> } />
               <Route path='/cpp' element = { <Blog style={CodeCss} input={searchInput} posts={cppPosts} /> } />
               <Route path='/data_science' element = { <Blog style={CodeCss} input={searchInput} posts = {datasciencePosts} /> } />
+              <Route path='/mathematics' element = { <Blog input={searchInput} posts={mathematicsPosts} /> } />
               <Route path='/physics' element = { <Blog input={searchInput} posts = {physicsPosts} /> } />
               <Route path='/physics_particle' element = { <Blog input={searchInput} posts = {particlesPosts} /> } />
             </Routes>

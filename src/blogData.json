@@ -275,7 +275,7 @@
         {
             "postTitle": "SQL Cheatsheet",
             "postLines": [
-                {"line": "", "code": false, "image": true, "src" : ["/pdfs/SQL_Queries_0.jpg", "/pdfs/SQL_Queries_1.jpg"]},
+                {"line": "", "code": false, "image": true, "src" : ["/pdfs/SQL_Queries_0.jpg", "/pdfs/SQL_Queries_1.jpg", "/pdfs/SQL_Queries_2.jpg"]},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
                 {"line": "", "code": false},
@@ -1027,6 +1027,14 @@
             ],
             "postTags": "",
             "id": 2.2
+        }
+    ],
+    "mathematics" : [
+        {
+            "postTitle": "Proof of the Arithmetic Mean and Geometric Mean (AM-GM) Inequality",
+            "postLines": [
+                {"line": "", "code": false, "image": true, "src" : ["/pdfs/AM_GM/AM_GM__Inequality-0.jpg", "/pdfs/AM_GM/AM_GM__Inequality-1.jpg"]}
+            ]
         }
     ],
     "physics" : [

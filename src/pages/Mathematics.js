@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Combinatorics from './mathematics_canvas/Combinatorics';
+import Trigonometry from '../components/mathematics/Trigonometry';
 
 export default function Mathematics(){
     const navigate = useNavigate();
@@ -34,9 +35,9 @@ export default function Mathematics(){
             <div id='trigonometry' className='subject-container'>
 
                 <h3 className='subject-title'>
-                    Combinatorics 
+                    Trigonometry 
                 </h3>
-                <Combinatorics navigate={navigate}/>
+                <Trigonometry navigate={navigate}/>
                 
                 
             </div>

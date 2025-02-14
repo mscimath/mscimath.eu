@@ -20,9 +20,9 @@ const Combinatorics = ({ navigate }) => {
 
   return (
     <div className="subject-intro-container">
-      <div className="background-canvas" style={{ width: canvasWidth }}>
-        {/* Background Canvas */}
-      </div>
+      {/*<div className="background-canvas" style={{ width: canvasWidth }}>
+         Background Canvas 
+      </div>*/}
       <div className="content">
         <CombinatoricsCanvas />
         <CombinatoricsSubjectList/>
