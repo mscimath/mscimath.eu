@@ -1,6 +1,7 @@
 import './Canvas.css';
 import Atom from './physics_canvas/Atom';
 import SliderImage from '../components/SliderImage';
+import UnitConverter from '../components/UnitConverter';
 
 export default function Physics(){
     
@@ -9,19 +10,11 @@ export default function Physics(){
         <>
         <section>
             <h2 className='section-title'>Physics</h2>
-            <div className='section-paragraph'>
-                <h4>Rotational Motion</h4>
-                <p>
-                    Teaching purpose
-                    In this section you will learn:
-                    describe the physical meaning of rotational variables as applied to rotation around a fixed axis;
-                    explain how angular velocity is related to tangential velocity;
-                    calculate, knowing the time dependence of the angular position, the instantaneous angular velocity at any time;
-                    determine the angular velocity and angular acceleration of a rotating body;
-                    calculate the average angular acceleration when the angular velocity changes;
-                    calculate instantaneous angular acceleration, knowing the dependence of angular velocity on time.
-                    So far, we have dealt mainly with the analysis of progressive motion. The variables describing translational motion are: displacement, velocity and acceleration. We now extend our description of motion to rotation about a fixed axis. We will see that rotation is described by a set of related variables, similar to those we used to describe translational motion.
-                </p>
+            <div className='section-physics-top'>
+                <div className='top-left'></div>
+                <div className='top-right'>
+                    <UnitConverter />
+                </div>
             </div>
             <div className='section-paragraph'>
             <p>
