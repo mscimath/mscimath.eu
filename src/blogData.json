@@ -469,10 +469,120 @@
             "id": 4
         },
         {
-            "postTitle": " Post",
+            "postTitle": "Functions and Methods of Arrays in JavaScript",
             "postLines": [
-                {"line": "", "code": false},
-                {"line": "", "code": true}
+                {"line": "Do you know all the methods used for arrays in JavaScript?", "code": false, "subsubtitle": true},
+                {"line": "Arrays are one of the fundamental elements of JS, but are you sure that you are using all of their potential? Check with me the most important methods and see how they can shorten your coding time by substituting the classical loops. Below, you will find an extensive list with examples.", "code": false},
+                {"line": "🔹Adding / Subtracting elements", "subsubtitle": true},
+                {"line": "   push()      # Adds an element to the end of the array.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.push(4);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   pop()       # Removes and returns the last element.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.pop();", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   unshift()   # Adds an element to the beginning of the array.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.unshift(0);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   shift()     # Removes and returns the first element.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.shift();", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   splice()    # Adds, removes or substitutes elements at a certain place.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.splice(1, 2, \"x\");", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   slice()     # Returns a new array as a copy of a chosen fragment of an array.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.slice(1, 3);", "code": true},
+                {"line": " 🔹Iteration over Arrays", "subsubtitle": true},
+                {"line": "   forEach()   # Performs a function on each element.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.forEach(el => console.log(el));", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   map()       # Creates a new array modifying each element.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.map(el => el * 2);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   filter()    # Creates a new array with elements satisfying a given rule", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.filter(el => el > 2);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   reduce()    # Reduces an array to one single value (e.g. a sum)", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.reduce((acc, el) => acc + el, 0);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   some()      # Checks whether at least one of the elements satisfies a rule.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.some(el => el > 2);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   every()     # Checks whether all of the elements satisfy a rule.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.every(el => el > 0);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   find()      # Returns the first element that satisfies a condition.", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   arr.find(el => el > 2);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   findIndex() # Returns the index of the first matching element", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.findIndex(el => el > 2);"},
+                {"line": "   flat()      # Flattens nested arrays into a single array.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   const nestedArr = [1, [2, [3, 4]], 5];", "code": true},
+                {"line": "   console.log(nestedArr.flat(2));    // Output: [1, 2, 3, 4, 5]", "code": true},
+                {"line": "   # The number 2 in flat(2) determines how many levels deep the array should be flattened."},
+                {"line": "   const nestedArr = [1, [2, [3, 4]], 5];", "code": true},
+                {"line": "   console.log(nestedArr.flat(1));    // Output: [1, 2, [3, 4], 5] → Flattens only one level down", "code": true},
+                
+                {"line": "   flatMap()   # Maps each element and then flattens the result by one level."},
+                {"line": "🔹 Sorting and Modifying the Order", "subsubtitle": true},
+                {"line": "   sort()      # Sorts an array (default as strings).", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.sort((a, b) => a - b);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   reverse()   # Reverses the order of elements.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.reverse();", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   toSorted()"},
+                {"line": "   toReversed()"},
+                {"line": "   toSpliced()"},
+                {"line": "🔹 Joining and Checking Arrays", "subsubtitle": true},
+                {"line": "   concat()        # Joins (concatenates) arrays", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr1.concat(arr2);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   join()          # Creates a string from elements of an array.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.join(\", \");", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   includes()      # Checks whether an element exists in an array.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.includes(3);", "code": true},
+                {"line": "   ", "code": true},
+                {"line": "   indexOf()       # Returns the index of the first occurance of some element.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.indexOf(3);", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   lastIndexOf()   # Returns the index of the last occurance of some element.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   arr.lastIndexOf(3);", "code": true},
+                {"line": "🔹 Creating Arrays", "subsubtitle": true},
+                {"line": "   Array.from()    # Creates an array from an iterable object (e.g. a string).", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   Array.from(\"hello\");", "code": true},
+                {"line": " ", "code": true},
+                {"line": "   Array.of()      # Creates an array from given values.", "code": true},
+                {"line": "   # Use:", "code": true},
+                {"line": "   Array.of(1, 2, 3);", "code": true},
+                {"line": "  ", "code": true},
+                {"line": "   fill()          # Fills an array with one value", "code": true},
+                {"line": "   # Use: ", "code": true},
+                {"line": "   const fruits = [\"Banana\", \"Orange\"];", "code": true},
+                {"line": "   fruits.fill(\"Kiwi\"); // [\"Kiwi\", \"Kiwi\"]"}
             ],
             "postTags": "",
             "id": 5
@@ -1339,15 +1449,79 @@
             "id": 2.0
         },
         {
-            "postTitle": "PyGym Exercise 2.1",
+            "postTitle": "Lorentz Symmetry: The Foundation of Modern Physics",
             "postLines": [
-                {"line": "Write a program that asks the user for their name and year of birth, then calculates and prints their age.", "code": false},
-                {"line": "Examplary execution:", "code": false},
-                {"line": "Give your name:", "code": false},
-                {"line": "Johnny", "code": false},
-                {"line": "Enter year of birth:", "code": false},
-                {"line": "1989", "code": false},
-                {"line": "John, you are 30 years old.", "code": false}
+                {"line": "Introduction", "subtitle": true, "code": false},
+                {"line": "Lorentz symmetry stands as one of the most fundamental principles in modern physics, serving as the mathematical backbone of Einstein's Special Theory of Relativity. Named after Dutch physicist Hendrik Antoon Lorentz, this symmetry principle revolutionized our understanding of space and time, unifying them into a single entity—spacetime. This article explores the origins, mathematical formulation, and profound implications of Lorentz symmetry, as well as its experimental verification and potential limitations.", "code": false},
+                {"line": "Historical Context", "subtitle": true, "code": false},
+                {"line": "The story of Lorentz symmetry begins in the late 19th century, during a period of crisis in physics. Maxwell's equations, which unified electricity and magnetism, predicted that light waves should travel at a constant speed regardless of the observer's motion. This prediction contradicted the well-established Galilean principle of relativity, which held that the laws of mechanics should remain invariant under transitions between inertial reference frames.", "code": false},
+                {"line": "In 1887, the famous Michelson-Morley experiment attempted to detect the Earth's motion through the hypothetical luminiferous ether—a medium thought to permeate all space and carry light waves. The experiment's null result posed a significant challenge to classical physics: it showed no detectable difference in the speed of light regardless of the Earth's motion through space.", "code": false},
+                {"line": "Hendrik Lorentz, along with George FitzGerald, initially proposed that objects contract in the direction of motion through the ether—a phenomenon now known as Lorentz contraction. Later, Lorentz developed a set of transformations that preserved the form of Maxwell's equations when shifting between reference frames in relative motion.", "code": false},
+                {
+                    "line": "These Lorentz transformations, later incorporated into Einstein's theory of special relativity, describe how time, length, and other physical quantities change when observed from different inertial frames. The key insight was that space and time are not absolute, as previously thought, but are intertwined in a four-dimensional continuum known as spacetime.",
+                    "code": false
+                  },
+                  {
+                    "line": "The Mathematical Formulation",
+                    "subtitle": true,
+                    "code": false
+                  },
+                  {
+                    "line": "At the heart of Lorentz symmetry lies the Lorentz transformation. These equations describe how coordinates (time and space) change when observed from a different inertial reference frame moving at a constant velocity relative to the original frame. In its simplest form, the Lorentz transformation for space and time in one dimension is given by:",
+                    "code": false
+                  },
+                  {
+                    "line": "x' = (x - vt) / √(1 - v²/c²),",
+                    "code": true
+                  },
+                  {
+                    "line": "t' = (t - vx/c²) / √(1 - v²/c²),",
+                    "code": true
+                  },
+                  {
+                    "line": "where x and t are the position and time coordinates in one reference frame, x' and t' are the coordinates in another frame moving at velocity v relative to the first, and c is the speed of light in vacuum. These equations reveal the striking conclusion that time and space are not absolute; they depend on the observer's motion, and the speed of light remains constant in all inertial frames.",
+                    "code": false
+                  },
+                  {
+                    "line": "Implications and Consequences",
+                    "subtitle": true,
+                    "code": false
+                  },
+                  {
+                    "line": "The implications of Lorentz symmetry are profound and far-reaching. One of the most well-known consequences is time dilation: moving clocks run slower compared to those at rest. Similarly, length contraction occurs, meaning objects in motion appear shorter in the direction of travel. These effects, though minute at everyday speeds, become significant at speeds close to the speed of light.",
+                    "code": false
+                  },
+                  {
+                    "line": "Another critical outcome of Lorentz symmetry is the unification of space and time into the concept of spacetime. Events that occur at the same time in one frame may appear at different times in another. This leads to the concept of causality and the understanding that the speed of light serves as a universal speed limit, preventing any signal or object from exceeding it.",
+                    "code": false
+                  },
+                  {
+                    "line": "Experimental Verification",
+                    "subtitle": true,
+                    "code": false
+                  },
+                  {
+                    "line": "Over the years, Lorentz symmetry has been experimentally verified in numerous ways. One of the most convincing tests comes from particle accelerators, where particles moving close to the speed of light exhibit time dilation and length contraction as predicted. The Global Positioning System (GPS) also relies on adjustments for relativistic time dilation to maintain accuracy, demonstrating the practical applications of Lorentz symmetry in everyday technology.",
+                    "code": false
+                  },
+                  {
+                    "line": "Potential Limitations",
+                    "subtitle": true,
+                    "code": false
+                  },
+                  {
+                    "line": "While Lorentz symmetry has been confirmed in a wide range of experiments, there are theoretical indications that it may not be an exact symmetry at extremely high energies, such as those encountered in quantum gravity or the very early universe. Some theories, such as string theory and loop quantum gravity, suggest that spacetime may exhibit more complex structures at these scales, potentially violating Lorentz symmetry in some regimes.",
+                    "code": false
+                  },
+                  {
+                    "line": "Conclusion",
+                    "subtitle": true,
+                    "code": false
+                  },
+                  {
+                    "line": "Lorentz symmetry remains one of the cornerstones of modern physics, underpinning the framework of both special relativity and our understanding of the nature of spacetime. Though its validity is well established in a broad range of experiments, future discoveries may reveal more about the limits of this symmetry at extremely high energies or in the quantum realm. For now, Lorentz symmetry continues to shape our exploration of the universe, providing a vital guide in our quest for understanding the fundamental laws of nature.",
+                    "code": false
+                  }
             ],
             "postTags": "",
             "id": 2.1
