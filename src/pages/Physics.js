@@ -1,5 +1,6 @@
 import './Canvas.css';
-import Atom from './physics_canvas/Atom';
+import './Physics.css';
+import WaveAnimation from './physics_canvas/WaveAnimation';
 import SliderImage from '../components/SliderImage';
 import UnitConverter from '../components/UnitConverter';
 
@@ -10,12 +11,14 @@ export default function Physics(){
         <>
         <section>
             <h2 className='section-title'>Physics</h2>
-            <div className='section-physics-top'>
-                <div className='top-left'></div>
-                <div className='top-right'>
+            <div className='container-physics-top'>
+                <div className='physics-top-left'></div>
+                <div className='physics-top-right'>
                     <UnitConverter />
                 </div>
             </div>
+            <WaveAnimation/>
+
             <div className='section-paragraph'>
             <p>
                 <h4>Angular speed</h4>
@@ -33,9 +36,7 @@ export default function Physics(){
             </p>
             </div>
             <div className='content-container'>
-                <div className='canvas-container'>
-                    <Atom/>
-                </div>
+                
                 <div className='content-text'>
 
                 </div>

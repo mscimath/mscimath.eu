@@ -1,0 +1,22 @@
+.container-physics-top {
+    display: grid;
+    grid-template-areas: 
+        "left right"
+        "left right"
+        ;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.physics-top-left {
+    grid-area: left;
+    border: 1px slategrey dotted;
+}
+
+.physics-top-right {
+    grid-area: right;
+    padding: 1rem;
+    border: 1px slategrey dotted;
+}
+

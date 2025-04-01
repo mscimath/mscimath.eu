@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './UnitConverter.css';
 
 const unitData = {
     Length: { meters: 1, kilometers: 0.001, miles: 0.000621371, feet: 3.28084 },
@@ -30,9 +31,9 @@ export default function UnitConverter() {
 
     return (
         <div className="unit-converter">
-            <h3 className="unict-converter-title">Unit Converter</h3>
+            <h3 className="unit-converter-title">Unit Converter</h3>
             <label>
-                Category:
+                Category: &nbsp;
                 <select className="unit-converter-select" 
                 value={category} onChange={(e) => { 
                     setCategory(e.target.value);
@@ -46,7 +47,7 @@ export default function UnitConverter() {
             </label>
 
             <label>
-                Value:
+                Value: &nbsp;
                 <input
                 type="number"
                 value={value}
@@ -55,7 +56,7 @@ export default function UnitConverter() {
             </label>
 
             <label>
-                From:
+                From: &nbsp;
                 <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)}>
                     {Object.keys(unitData[category]).map((unit) => (
                         <option key={unit} value={unit}>{unit}</option>
@@ -64,7 +65,7 @@ export default function UnitConverter() {
             </label>
 
             <label>
-                To:
+                To: &nbsp;
                 <select value={toUnit} onChange={(e) => setToUnit(e.target.value)}>
                     {Object.keys(unitData[category]).map((unit) => (
                         <option key={unit} value={unit}>{unit}</option>
@@ -72,7 +73,7 @@ export default function UnitConverter() {
                 </select>
             </label>
 
-            <p className="converter-converted-value">Converted Value: {converted} {toUnit}</p>
+            <p className="converter-converted-value">Converted Value:&nbsp;{converted} {toUnit}</p>
         </div>
     )
 }
