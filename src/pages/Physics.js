@@ -19,8 +19,11 @@ export default function Physics(){
             </div>
             <WaveAnimation/>
 
-            <div className='section-paragraph'>
-            <p>
+            <div className='section-paragraph subject-tile-container'>
+                <p className='subject-tile'>
+                    <h3 className='subject-tile-title'></h3>
+                </p>
+            <p className='subject-tile'>
                 <h4>Angular speed</h4>
                 The relation between value of the angle θ between the radius of the circle and the length of the arc is expressed by the formula: <br/>
                 θ=s/r<br/>

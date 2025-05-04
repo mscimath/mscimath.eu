@@ -20,3 +20,25 @@
     border: 1px slategrey dotted;
 }
 
+.subject-tile-container{
+    display: grid;
+}
+
+@media only screen and (max-width: 800px) {
+
+    
+    
+}
+
+@media only screen and (max-width: 540px) {
+    .container-physics-top {
+        display: grid;
+        grid-template-areas: 
+            "left"
+            "right"
+            ;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem;
+    }
+}

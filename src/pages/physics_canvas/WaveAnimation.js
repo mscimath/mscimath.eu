@@ -26,7 +26,7 @@ export default function WaveAnimation() {
                 ctx.lineTo(x, y);
             }
 
-            ctx.strokeStyle = "#0077ff";
+            ctx.strokeStyle = "#00ffff";
             ctx.lineWidth = 3;
             ctx.stroke();
 
