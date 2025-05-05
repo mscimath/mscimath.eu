@@ -3,29 +3,31 @@
     "general" : [
         {
             "postTitle": "The Intersection of Cognitive Sciences and Python",
+            "postId": "intersection-cognitive-py",
             "postLines": [
                 {"line": "Cognitive science is an interdisciplinary field that explores the nature of the human mind and its processes. It draws from various disciplines, including psychology, neuroscience, linguistics, philosophy, and computer science. The goal is to understand how people perceive, think, learn, and remember. As the field grows, the use of advanced computational tools, especially programming languages like Python, has become increasingly important.", "code": false, "subtitle": false},
                 {"line": "Python: A Versatile Tool for Cognitive Scientists", "code": false, "subtitle": true},
-                {"line": "Python is a high-level programming language known for its simplicity, readability, and vast ecosystem of libraries. It has become a go-to tool for researchers and practitioners in congnitive science due to its versatility and ease of use. Here's how Python can be useful in various aspects of cognitive science:", "code": false, "subtitle": false},
+                {"line": "Python is a high-level programming language known for its simplicity, readability, and vast ecosystem of libraries. It has become a go-to tool for researchers and practitioners in cognitive science due to its versatility and ease of use. Here's how Python can be useful in various aspects of cognitive science:", "code": false, "subtitle": false},
                 {"line": "1. Data Analysis and Visualisation", "code": false, "subtitle": true},
-                {"line": "Python offers poweful libraries such as Pandas, NumPy, and Matplotlib that facilitate data manipulation and visualization. Researchers can use these tools to analyze experimental data, visualize patterns, and draw meaningful conclusions. For example, Pandas enables efficient data handling, while Matplotlib and Seaborn are ideal for creating informative graphs and plots.", "code":false, "subtitle": false},
+                {"line": "Python offers powerful libraries such as Pandas, NumPy, and Matplotlib that facilitate data manipulation and visualization. Researchers can use these tools to analyze experimental data, visualize patterns, and draw meaningful conclusions. For example, Pandas enables efficient data handling, while Matplotlib and Seaborn are ideal for creating informative graphs and plots.", "code":false, "subtitle": false},
                 {"line": "In cognitive research, these tools are instrumental in several ways:", "code": false, "subtitle": false},
-                {"line": "1. Data Collection and Cleaning: Cognitive researchers often collect large datasetsthrough experiments, surveys, and neuroimaging techniques. Pandas, a data manipulation library, provides functionalities to import, clean, and preprocess this data efficiently. This step is crucial to ensure the accuracy and reliability of the subsequent analysis. For instance, researchers can handle missing data, filter outliers, and standardize data formats using Pandas.", "code": false, "subtitle": false},
-                {"line": "2. Statistical Analysis: NumPy, a library for numerical computing, is used for performing statistical analyses on experimental data. Researchers can calculate descriptive statistics such mean, median, standard deviation, and perform inferential statistics like t-tests, ANOVA, and regression analyses. These statistical methods help in understanding the underlying patterns and relationships in the data, which are essential for testing hypotheses in cognitive research.", "code": false, "subtitle": false},
-                {"line": "3. Visualization of Results: Visualization is key to making sense of complex data. Matplotlib and Seaborn are powerful visualization libraries that allow researchers to create a variety of plots and graphs, such as histograms, scatter plots, and heatmaps. These visualization help in identifying trends, outliers, and correlations within the data. For example, a researcher studying reaction times across different conditions might use a box plot to visualize the distribution of reaction times and highlight any significant differences.", "code": false, "subtitle": false},
+                {"line": "1. Data Collection and Cleaning: Cognitive researchers often collect large datasets through experiments, surveys, and neuroimaging techniques. Pandas, a data manipulation library, provides functionalities to import, clean, and preprocess this data efficiently. This step is crucial to ensure the accuracy and reliability of the subsequent analysis. For instance, researchers can handle missing data, filter outliers, and standardize data formats using Pandas.", "code": false, "subtitle": false},
+                {"line": "2. Statistical Analysis: NumPy, a library for numerical computing, is used for performing statistical analyses on experimental data. Researchers can calculate descriptive statistics such as mean, median, standard deviation, and perform inferential statistics like t-tests, ANOVA, and regression analyses. These statistical methods help in understanding the underlying patterns and relationships in the data, which are essential for testing hypotheses in cognitive research.", "code": false, "subtitle": false},
+                {"line": "3. Visualization of Results: Visualization is key to making sense of complex data. Matplotlib and Seaborn are powerful visualization libraries that allow researchers to create a variety of plots and graphs, such as histograms, scatter plots, and heatmaps. These visualizations help in identifying trends, outliers, and correlations within the data. For example, a researcher studying reaction times across different conditions might use a box plot to visualize the distribution of reaction times and highlight any significant differences.", "code": false, "subtitle": false},
                 {"line": "4. Time-Series Analysis: Cognitive research often involves analyzing time-series data, such as EEG recording or reaction time sequences. Pandas and Matplotlib provide functionalities for time-series analysis allowing researchers to visualize and analyze changes over time. For instance, a researcher might use these tools to plot EEG signals over time and identify patterns associated with specific cognitive tasks.", "code": false, "subtitle": false},
-                {"line": "5. Neuroimaging Data: In studies involving neuroimaging data, such as fMRI or PET scans, visualtizations play a crucial role in interpreting brain activity. Libraries like Nilearn (built on top of NumPy and Matplotlib) offer specialized tools for visualizing brain maps and connectomes. Researchers can create 3D plots of brain activity, overlay statistical maps, and visualize functional connectivity between brain regions.", "code": false, "subtitle": false},
+                {"line": "5. Neuroimaging Data: In studies involving neuroimaging data, such as fMRI or PET scans, visualizations play a crucial role in interpreting brain activity. Libraries like Nilearn (built on top of NumPy and Matplotlib) offer specialized tools for visualizing brain maps and connectomes. Researchers can create 3D plots of brain activity, overlay statistical maps, and visualize functional connectivity between brain regions.", "code": false, "subtitle": false},
                 {"line": "6. Machine Learning and Predictive Modeling: Python's integration with machine learning libraries like Scikit-learn allows researchers to build predictive models based on cognitive data. Visualization tools are used to interpret model outputs, such as feature importance and classification boundaries. This approach is particularly useful in identifying cognitive markers for conditions like Alzheimer's disease or ADHD.", "code": false, "subtitle": false},
                 {"line": "Example in Practice", "code": false, "subtitle": true},
                 {"line": "Imagine a study investigating the impact of sleep deprivation on cognitive performance. Researchers collect data on participants' reaction times and accuracy in various cognitive tasks. Using Pandas, they preprocess the data by handling missing values and normalizing the scores. With NumPy, they perform statistical tests to compare reaction times between well-rested and sleep-deprived groups.", "code": false, "subtitle": false},
-                {"line": "To visualize the results, they yse Seaborn to create box plots showing the distribution of reaction times and bar graphs to illustrate differences in accuracy. Additionally, they employ time-series analysis to visualize changes in performance over multiple testing sessions. These visualizations help in drawing meaningful conclusions about the effects of sleep deprivation on cognitive functions.", "code": false, "subtitle": false},
-                {"line": ""}               
+                {"line": "To visualize the results, they use Seaborn to create box plots showing the distribution of reaction times and bar graphs to illustrate differences in accuracy. Additionally, they employ time-series analysis to visualize changes in performance over multiple testing sessions. These visualizations help in drawing meaningful conclusions about the effects of sleep deprivation on cognitive functions.", "code": false, "subtitle": false},
+                {"line": ""}
             ]
         },
         {
             "postTitle": "How Programming Supports Learning Mathematics and Physics?",
+            "postId": "programming-supports-scimath",
             "postLines": [
-                {"line": "Mathematics and physics are disciplines deeply rooted in calculations and modeling. Over the yars, programming has revolutionized the way we approach problems in these fields, making processes more efficient and accurate. In this article, you'll discover:", "code": false, "subtitle": false},
+                {"line": "Mathematics and physics are disciplines deeply rooted in calculations and modeling. Over the years, programming has revolutionized the way we approach problems in these fields, making processes more efficient and accurate. In this article, you'll discover:", "code": false, "subtitle": false},
                 {"line": "\u26AC The best programming languages for mathematics", "code": false},
                 {"line": "\u26AC How algorithms transform scientific computations.", "code": false},
                 {"line": "\u26AC Examples of tools and programs that simplify learning in these areas.", "code": false},
@@ -61,6 +63,7 @@
         },
         {
             "postTitle": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+            "postId": "bitcoin",
             "postLines": [
                 {"line": "Satoshi Nakamoto", "code": false},
                 {"line": "satoshin@gmx.com", "code": false},
@@ -211,6 +214,7 @@
         },
         {
             "postTitle": "How do cryptocurrencies work? What is blockchain technology?",
+            "postId": "crypto-blockchain-basics",
             "postLines": [
                 {"line": "Cryptocurrencies - what is it?", "code": false},
                 {"line": "Many people will be tempted to call cryptocurrencies digital money. Most of all, due to the fact that they can perform a payment function. However, the truth is that it is not a currency in the strict sense. Completely different mechanisms are at work here. It is definitely better to consider cryptocurrencies as a form of investing money. Especially since most of the buying and selling takes place on the stock market. Many people decide to buy cryptocurrencies in exchange offices for cryptocurrencies, which provide the service of buying and selling digital currencies, including the most popular bitcoin. Cryptocurrencies exist only in virtual form. Their price, as it happens on the stock exchange, is the result of free market mechanisms, determined by the current demand and supply.", "code": false},
@@ -229,6 +233,7 @@
         },
         {
             "postTitle": "Will the act on artificial intelligence protect us from the invasion of robots and the annihilation of humanity?",
+            "postId": "legal-protection-from-ai",
             "postLines": [
                 {"line": "\"In April 2021, the European Commission presented a very important legislative project - the Artificial Intelligence (AIA) Act, which is intended to establish a strong framework for human protection in the era of artificial intelligence. It also has other goals, such as promoting innovation through the so-called regulatory sandboxes or facilitations for entities from the SME sector, but the foundation is indeed a human being and fundamental rights and values. AIA has undergone a major evolution over the last two years, all due to unclear or too general terms and sometimes unrealistic assumptions that would prevent the implementation of appropriate solutions by the addressees of specific requirements.", "code": false},
                 {"line": "In the meantime, other acts have appeared, such as the European Data Governance Act, the Data Act and the Digital Single Market Regulation. (...) it is worth knowing that the legal framework in this area is subject to very dynamic changes. Each of these legal acts - in its own way - is to protect us against the risks that artificial intelligence may generate.", "code": false},
@@ -243,7 +248,8 @@
             "id": 3
         },
         {
-            "postTitle": "Feedfowrward Neural Networks and their Creation in Python",
+            "postTitle": "Feedforward Neural Networks and their Creation in Python",
+            "postId": "feedforward-NN-py",
             "postLines": [
                 {"line": "Today we will try to understand the operation of Feedforward neural networks, by constructing a simple example of such a network in Python.", "code": false},
                 {"line": "Even though Machine Learning's mathematical engine is a complex concept to comprehend, in today's example only the ability to multiply matrices is required to grasp the idea.", "code": false},
@@ -258,7 +264,8 @@
             "id": 4.0
         },
         {
-            "postTitle": "SaaS?",
+            "postTitle": "What is SaaS?",
+            "postId": "what-saas",
             "postLines": [
                 {"line": "Software as a service, or SaaS in short,  a software sharing model that has gained immense popularity in recent years. To a large extent, this is due to the continuous development of cloud technologies and the greater opportunities that subsequent innovations in this area give to the creators of computer programs. Even if you've never heard of SaaS, you probably still use the applications provided in this model every day.", "code": false},
                 {"line": "It is a model of distribution of computer applications, with clients having acces to the tool they need only via Internet. The application uses the public cloud infrastructure for efficient operation, where its resources are also stored.", "code": false},
@@ -274,6 +281,7 @@
         },
         {
             "postTitle": "SQL Cheatsheet",
+            "postId": "sql-cheatsheet",
             "postLines": [
                 {"line": "", "code": false, "image": true, "src" : ["/pdfs/SQL_Queries_0.jpg", "/pdfs/SQL_Queries_1.jpg", "/pdfs/SQL_Queries_2.jpg"]},
                 {"line": "", "code": false},
@@ -291,6 +299,7 @@
     "javascript" : [
         {
             "postTitle": "What is JavaScript?",
+            "postId": "what-js",
             "postLines": [
                 {"line": "JavaScript is the lifeblood of interactivity on the web, but its origins trace back to an era when the internet was still in its infancy. In 1995, a Netscape Communications engineer named Brendan Eich was tasked with creating a lightweight scripting language for the web - one that would enable developers to engance static HTML pages with dynamic behavior. The result, crafted in just ten days, was first called Mocha, then LiveScript, and finally, JavaScript - a name strategically chosen to ride the wave of Java's rising popularity, despite the two languages being fundamentally different.", "code": false},
                 {"line": "Initially, JavaScript was designed as a simple tool to handle user interactions - things like validationg form inputs, responding to button clicks, or even changing webpage elements on the fly, all without requiring constant communication with a remote server. This ability to execute code directly in the browser made websites feel more alive and responsive, laying the groundwork for the dynamic, app-like experiences we now take for granted.", "code": false},
@@ -301,6 +310,7 @@
         },
         {
             "postTitle": "The Essence of JavaScript: How It Works and What Defines It",
+            "postId": "essence-js",
             "postLines": [
                 {"line" : "JavaScript is one of the most influential programming languages in the modern web ecosystem. It enables websites to be dynamic, interactive, and user-friendly. However, unlike many traditional programming languages, JavaScript is shaped by a unique set of characteristics that define both its strengths and limitations."},
                 {"line" : "Client-Side Execution: An Interpreted Language", "code": false, "subtitle": true},
@@ -325,6 +335,7 @@
         },
         {
             "postTitle": "Asynchronous Programming in JavaScript: a Guide to Non-Blocking Code",
+            "postId": "asynchronous-js",
             "postLines": [
                 {"line": "JavaScript is known for its ability to create dynamic and interactive web applications. However, one of its most powerful yet often misunderstood features is asynchronous programming. Without it, modern applications would freeze while waiting for tasks like fetching data, reading files, or interacting with APIs.", "code": false, "subtitle": false},
                 {"line": "But what exactly is asynchronous programming, and why is it so essential in JavaScript? Let’s break it down.", "code": false, "subtitle": false},
@@ -333,8 +344,9 @@
         },
         {
             "postTitle": "Assigning values of one object onto another.",
+            "postId": "object-values-js",
             "postLines": [
-                {"line": "var objA = {", 
+                {"line": "var objA = {",
                 "code": true},
                 {"line": "   age: '8',", "code": true},
                 {"line": "   city: 'Porto'", "code": true},
@@ -353,10 +365,11 @@
                 {"line": " experience: '1'}", "code": true}
             ],
             "postTags": "object, Object.assign(), copying objects",
-            "id": 1.10 
+            "id": 1.10
         },
         {
             "postTitle": "The switch statement.",
+            "postId": "switch-js",
             "postLines": [
                 {"line": "var day = 7;", "code": true},
                 {"line": "switch(day){", "code": true},
@@ -387,6 +400,7 @@
         },
         {
             "postTitle": " Looping over a Map() object.",
+            "postId": "map-loop",
             "postLines": [
                 {"line": "let zoo = new Map();", "code": true},
                 {"line": "", "code": true},
@@ -412,6 +426,7 @@
         },
         {
             "postTitle": " Map() Object in JavaScript",
+            "postId": "map-object",
             "postLines": [
                 {"line": "Since EcmaScript 6 we have new classes, which can facilitate working with collections. Map and WeakMap are just two of these classes.", "code": false},
                 {"line": "All objects in JavaScript can be looked at as we do at Map() objects. An Object, in summary, consists of properties and values. We could think of them like of keys and values.", "code": false},
@@ -470,6 +485,7 @@
         },
         {
             "postTitle": "Functions and Methods of Arrays in JavaScript",
+            "postId": "array-functions",
             "postLines": [
                 {"line": "Do you know all the methods used for arrays in JavaScript?", "code": false, "subsubtitle": true},
                 {"line": "Arrays are one of the fundamental elements of JS, but are you sure that you are using all of their potential? Check with me the most important methods and see how they can shorten your coding time by substituting the classical loops. Below, you will find an extensive list with examples.", "code": false},
@@ -536,7 +552,7 @@
                 {"line": "   # The number 2 in flat(2) determines how many levels deep the array should be flattened."},
                 {"line": "   const nestedArr = [1, [2, [3, 4]], 5];", "code": true},
                 {"line": "   console.log(nestedArr.flat(1));    // Output: [1, 2, [3, 4], 5] → Flattens only one level down", "code": true},
-                
+
                 {"line": "   flatMap()   # Maps each element and then flattens the result by one level."},
                 {"line": "🔹 Sorting and Modifying the Order", "subsubtitle": true},
                 {"line": "   sort()      # Sorts an array (default as strings).", "code": true},
@@ -589,6 +605,7 @@
         },
         {
             "postTitle": " Post",
+            "postId": "",
             "postLines": [
                 {"line": "", "code": false},
                 {"line": "", "code": true}
@@ -600,6 +617,7 @@
     "python" : [
         {
             "postTitle": "Python Syntax",
+            "postId": "py-syntax",
             "postLines": [
                 {"line": "Python syntax or any programming language syntax is a set of rules to be followed in order for our code to be well understandable and executed in the way we intend it to work.", "code": false},
                 {"line": "print(2+4)", "code": true},
@@ -787,7 +805,7 @@
             ],
             "postTags": "",
             "id": 4.0
-        }, 
+        },
         {
             "postTitle": "Object-Oriented Programming in Python: A Comprehensive Guide",
             "postLines": [
@@ -901,11 +919,11 @@
             "postTitle": "Understanding GeoCityLite - A Lightweight Geolocation Database for Python Applications",
             "postLines": [
                 {"line": "In an era where digital interactions are increasingly location-aware, the need for efficient geolocation tools has never been greater. One such tool that stands out for it's balance betweem performance and accessibility is GeoCityLite, a lightweight geolocation database that enables developers to determine the geographic location of IP addresses. This article explores what GeoCityLite is, it's significance, and how it can be effectively leveraged in Python applications."},
-                {"line": "What is GeoCityLite", "subtitle": true}, 
+                {"line": "What is GeoCityLite", "subtitle": true},
                 {"line": "GeoCityLite is a freely available, IP-based geolocation database provided by MaxMind, a leading provider of geolocation services. It offers city-level location data for a given IP address, including details such as country, region, latitude, longitude, and time zone. While GeoCityLite is a free and more limited version of MaxMind's GeoIP2 database, it remains a valuable tool for developers who require essential geolocation capabilities without the cost of premium solutions."},
                 {"line": "GeoCityLite databases are distributed in GeoIP2 format and can be queried using specialized libraries such as MaxMind's geoip2 Python package. The database is periodically updated to reflect changes in IP-to location mappings, ensuring relatively accurate geolocation data."},
                 {"line": "Use Cases of GeoCityLite in Python", "subtitle": true},
-                {"line": "GeoCityLite's flexibility makes it useful in a wide array of applications. Below are some prominent use cases:"}, 
+                {"line": "GeoCityLite's flexibility makes it useful in a wide array of applications. Below are some prominent use cases:"},
                 {"line": "1. Personalizing Content Based on Location", "subsubtitle": true},
                 {"line": "Web applications and services can use GeoCityLite to deliver location-specific content. For example, an e-commenrce platform can customize product recommendations, language settings, or currency display based on the user's geographical location."},
                 {"line": "2. Enhancing Security with IP-Based Restrictions", "subsubtitle": true},
@@ -929,7 +947,7 @@
                 {"line": " ", "code": true},
                 {"line": "# Configure logging", "code": true},
                 {"line": "logging.basicConfig(filename='geolocation.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')", "code": true},
-                {"line": " ", "code": true}, 
+                {"line": " ", "code": true},
                 {"line": "def get_location(ip, reader):", "code": true},
                 {"line": "   try:", "code": true},
                 {"line": "      response = reader.city(ip)", "code": true},
@@ -1070,7 +1088,7 @@
                 {"line": "'Supervised Learning' in which the algorithm is trained on labeled data, where each example is associated with a target or outcome variable. The algorithm learns from the input-output pairs in the training data and aims the generalize its predictions to new, unseen data. Common tasks in supervised learning include classification (predicting categories or classes) and regression (predicting continuous values).", "code": false},
                 {"line": "'Unsupervised Learning' in which the algorithm is trained on unlabeled data, where there are no predefined target variables. The goal of unsupervised learning is to uncover hidden patterns, structures, or relationships in the data. Common tasks in unsupervised learning include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features or variables while preserving important information).", "code": false},
                 {"line": "Statistical learning techniques are used in a wide range of applications, including image and speech recognition, natural language processing, recommandation systems, financial modeling, and many others. The field continues to advance rapidly, driven by innovations in algorithms, computational power, and the availability of large datasets.", "code": false}
-                
+
             ],
             "postTags": "",
             "id": 0.00
@@ -1212,8 +1230,8 @@
 
 
 
-                
-                
+
+
             ],
             "postTags": "",
             "id": 1.0
@@ -1627,6 +1645,6 @@
             "postTags": "",
             "id": 1.01
         }
-    ]   
-  } 
+    ]
+  }
 ]

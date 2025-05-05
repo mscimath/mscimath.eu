@@ -1,8 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Blog = ({ posts, input }) => {
   const [expandedPost, setExpandedPost] = useState(null);
   const [expandedImage, setExpandedImage] = useState(null);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const id = hash.substring(1); // Remove the #
+    let attempts = 0;
+
+    const interval = setInterval(() => {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        clearInterval(interval);
+      }
+      if (attempts > 10) clearInterval(interval); // stop after ~2s
+      attempts++;
+    }, 200);
+
+    return () => clearInterval(interval); // cleanup
+  }, []);
 
   const filteredPosts = posts.filter((el) => {
     if (input === "") {
@@ -35,10 +55,10 @@ const Blog = ({ posts, input }) => {
     <div className="blogs">
       {filteredPosts.map((post) => {
         const hasImages = post.postLines.some((line) => line.image);
-        
+
         return (
           <div
-            id={`post-${post.id}`}
+            id={post.postId.toLowerCase()}
             className={`blog reveal active ${expandedPost === post.id ? 'expanded' : ''} ${hasImages ? 'has-images' : ''}`}
             key={post.id}
           >
@@ -69,8 +89,8 @@ const Blog = ({ posts, input }) => {
                         key={index}
                         onClick={() => handleImageClick(src)}
                       >
-                        <img 
-                          src={src} 
+                        <img
+                          src={src}
                           alt={`Image ${index + 1} failed to load.`}
                         />
                       </div>
@@ -78,12 +98,12 @@ const Blog = ({ posts, input }) => {
                 </div>
               )}
             </div>
-            
+
             <div
               className={`expand-btn ${expandedPost === post.id ? 'expanded' : ''}`}
               onClick={() => toggleExpandPost(post.id, hasImages)}
             />
-            
+
             <div className="blog-post-footer">
               <h5>#: {post.postTags}</h5>
               <div className="theory" />
