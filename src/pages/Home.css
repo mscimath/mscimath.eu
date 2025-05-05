@@ -30,7 +30,7 @@
     font-weight: 400;
   font-style: normal;
    /* font-family: "Fasthand", cursive;*/
-    font-weight: 400;      
+    font-weight: 400;
     font-size: 2rem;
 }
 .menu-button {
@@ -47,7 +47,7 @@
     text-decoration: none;
     margin: 0vh;
     padding: 0 1.5vh;
-    color: rgb(83, 132, 200);
+    color: rgba(224, 220, 244, 0.6);
 
 }
 
@@ -59,57 +59,56 @@
       }
       #menu-buttons-container {
         margin: 2vh;
-    
+
       }
-    
-}  
+
+}
 
 @media only screen and (min-width: 445px) {
     .menu-button a {
         font-size: 1.7rem;
-    } 
+    }
     #menu-buttons-container {
         margin: 2vh;
-    
+
       }
 }
 
 @media only screen and (min-width: 845px) {
     .menu-button a {
         font-size: 2rem;
-    } 
+    }
     .menu-button {
         margin: 0.6rem;
     }
     #menu-buttons-container {
         margin: 5vh;
-    
+
       }
 }
 
 @media only screen and (min-width: 1200px) {
     .menu-button a {
         font-size: 2.2rem;
-    } 
+    }
     .menu-button {
         margin: 0.8rem;
     }
     #menu-buttons-container {
         margin: 5vh;
-    
+
       }
 }
 
 @media only screen and (min-width: 1845px) {
     .menu-button a {
         font-size: 3rem;
-    } 
+    }
     .menu-button {
         margin: 1rem;
     }
     #menu-buttons-container {
         margin: 6vh;
-    
+
       }
 }
-

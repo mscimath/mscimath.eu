@@ -9,7 +9,7 @@
     z-index: 2000;
     max-width: 100%;
   }
-  
+
   .top-header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@
     opacity: 1;
   }
 
-  /*Burger Menu*/ 
+  /*Burger Menu*/
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -53,10 +53,10 @@
   #lineThree {
     width: 30px;
     height: 3px;
-    background-color: rgba(24, 120, 244, 0.6);
+    background-color: rgba(224, 220, 244, 0.6);
     border-radius: 2px;
     margin-top: 4px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .cross #lineOne{
@@ -70,7 +70,7 @@
   .cross #lineThree {
     transform: scale(0);
   }
-  
+
   .menu .menu-item {
     width:auto;
     margin-right: 2vw;
@@ -79,7 +79,7 @@
     line-height: 1.5;
     vertical-align: middle;
   }
-  
+
   .menu .menu-item a:hover {
     color: #f4f4f4;
   }
@@ -143,7 +143,7 @@
 
 
 @media screen and (max-width: 768px) {
-    
+
   #main-header {
     padding: 0 15px;
     width: 100%;
@@ -179,7 +179,7 @@
   #lineThree {
     width: 20px;
     height: 4px;
-    background-color: rgb(24, 120, 244);
+    background-color: rgba(224, 220, 244, 0.6);
     border-radius: 2px;
     margin-top: 3px;
     transition: transform 0.3s ease;
@@ -196,7 +196,7 @@
   .cross #lineThree {
     transform: scale(0);
   }
-  
+
   .menu .nav_list {
     line-height: 1;
     padding: 0;
@@ -221,7 +221,7 @@
     text-align: center;
     white-space: nowrap; /* This is required unless you put the helper span closely near the img */
   }
-  
+
   .logo img {
     width: 100%;
     align-self: center;
