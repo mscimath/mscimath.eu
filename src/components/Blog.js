@@ -58,7 +58,7 @@ const Blog = ({ posts, input }) => {
 
         return (
           <div
-            id={post.postId.toLowerCase()}
+            id={(post.postId || '').toLowerCase()}
             className={`blog reveal active ${expandedPost === post.id ? 'expanded' : ''} ${hasImages ? 'has-images' : ''}`}
             key={post.id}
           >
