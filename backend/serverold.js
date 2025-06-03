@@ -1,3 +1,5 @@
+/*This server is on render*/
+
 /*//Load environment variables from .env file
 require('dotenv').config();
 

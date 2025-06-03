@@ -5,12 +5,13 @@ const MessageForm = () => {
     const [from, setFrom] = useState('');
     const [subject, setSubject] = useState('');
     let [text, setText] = useState('');
-    const [status, setStatus] = useState(''); // to manage success or error messages
+    const [status, setStatus] = useState('idle'); // to manage success or error messages
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setStatus('sending');
 
-        const messageBody = `${from}: ${text}`; //Combine email and text
+        const messageBody = `MSCIMATH | ${from}: ${text}`; //Combine email and text
 
         try {
             //Make an API call to the backend to send email
@@ -46,6 +47,18 @@ const MessageForm = () => {
             console.error('Error sending email:', error);
             setStatus('Error sending email. Please try again later.');
         }
+
+        // Reset status after 3 seconds
+        setTimeout(() => setStatus('idle'), 3000); 
+    };
+
+    const getButtonText = () => {
+        switch (status) {
+            case 'sending': return 'Sending...';
+            case 'success': return 'Sent ✅';
+            case 'error': return 'Error ❌';
+            default: return 'Send Message';
+        }
     };
 
     return (
@@ -53,27 +66,43 @@ const MessageForm = () => {
             <div className='form-item'>
                 <label>
                     Your Email: &nbsp;
-                    <input type="email" value={from} 
-                    onChange={(e) => setFrom(e.target.value)} required />
+                    <input 
+                        type="email" 
+                        value={from} 
+                        onChange={(e) => setFrom(e.target.value)} 
+                        required 
+                    />
                 </label>
             </div>
             <div className='form-item'>
                 <label>
                     Subject: &nbsp;
-                    <input type="text" value={subject} 
-                    onChange={(e) => setSubject(e.target.value)} required />
+                    <input 
+                        type="text" 
+                        value={subject} 
+                        onChange={(e) => setSubject(e.target.value)} 
+                        required 
+                    />
                 </label>
             </div>
             <div className='form-item'>
                 <label>
                     Message: &nbsp;
-                    <textarea value={text} 
-                    onChange={(e) => setText(e.target.value)} required />
+                    <textarea 
+                        value={text} 
+                        onChange={(e) => setText(e.target.value)} 
+                        required 
+                    />
                 </label>
             </div>
             <div className='form-item'>
-                <button type="submit">Send Message</button>
+                <button type="submit" disabled={status === 'sending'}>
+                    {getButtonText()}
+                </button>
             </div>
+
+            {status === 'success' && <p className='success-message'>Email sent successfully!</p>}
+            {status === 'error' && <p className='error-message'>Failed to send email.</p>}
         </form>
     );    
 };
