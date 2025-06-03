@@ -9,7 +9,8 @@ export default function Home(){
     const mainLinks =[
         {id : "blogs", category: "Read about...", linkItems: [
             {linkItem : "mainBlog", link : "#blog", linkTekst : "...it all."},
-            {linkItem : "mathematicsBlog", link : "/mathematics#blog", linkTekst : "...mathematics."}
+            {linkItem : "mathematicsBlog", link : "/mathematics#blog", linkTekst : "...mathematics."},
+            {linkItem : "physicsBlog", link : "/physics#blog", linkTekst : "...physics."}
         ]},
         {id : "subjects", category: "Learn about...", linkItems:[
             {linkItem : "python", link : "/python", linkTekst: "...programming in Python."}
