@@ -38,9 +38,9 @@ export default function HeaderCollapsable(props) {
         <header className={`main-header ${menuOpen ? 'menu-open' : ''}`} id="main-header">
             <div className='top-header' id="top-header">
                 <div className="logo">
-                    <Link to="/#home">
+                    <HashLink to="/#home">
                         <img src={logo} alt="home"/>
-                    </Link>
+                    </HashLink>
                 </div>
                 <div className={`menu nav_list ${menuOpen ? 'menu-open' : ''}`}>
                     <div className="menu-item smooth-link">

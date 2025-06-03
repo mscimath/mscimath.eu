@@ -35,3 +35,12 @@
     justify-content: center;
 }
 
+.success-message {
+    color: rgb(90, 174, 90);
+    margin-top: 10px;
+}
+
+.error-message {
+    color: rgb(211, 102, 102);
+    margin-top: 10px;
+}
