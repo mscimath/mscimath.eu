@@ -55,7 +55,7 @@ const Blog = ({ posts, input }) => {
     <div className="blogs">
       {filteredPosts.map((post) => {
         const hasImages = post.postLines.some((line) => line.image);
-
+        
         return (
           <div
             id={(post.postId || '').toLowerCase()}
