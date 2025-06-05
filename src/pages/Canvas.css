@@ -1,6 +1,7 @@
 .canvas-sandbox {
     height: 800px;
-    width: 46vw; /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
+    width: 100%; /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
+    position: relative;
     border: 12px solid rgba(255, 192, 203, 0.2);
     border-radius: 2%;
     margin: 0;
@@ -13,7 +14,7 @@
 
 .subject-intro-container{ /*przy małych screenach zamienic na 90vw a tekst pod sandboxem*/
     box-shadow: inset 1px 1px 1px 1px rgba(225, 225, 225, 0.4);
-    width: 80vw;
+    width: 80%;
     margin: auto;
     padding: 2rem;
     overflow: hidden;
@@ -23,7 +24,7 @@
 }
 
 .canvas-container canvas {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: block; /*Removes any default spacing/borders that might affect sizing*/
 }
@@ -42,6 +43,6 @@
 /*Mathematics*/
 /*Combinatorics*/
 #combinatorics-canvas > canvas {
-    width: 300px;
+    /*width: 300px;*/
     flex: 1;
 }

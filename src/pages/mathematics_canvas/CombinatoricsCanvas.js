@@ -8,8 +8,28 @@ const CombinatoricsCanvas = () => {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
 
+        const resizeCanvas = () => {
+          const parent = canvas.parentElement;
+          const rect = parent.getBoundingClientRect();
+
+          // Optional: support retina displays
+          const dpr = window.devicePixelRatio || 1;
+
+          canvas.width = rect.width * dpr;
+          canvas.height = rect.height * dpr;
+
+          canvas.style.width = `${rect.width}px`;
+          canvas.style.height =  `${rect.height}px`;
+
+          context.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+          drawNodes(); //Call the drawNodes function when the component mounts
+
+        }
+
         const drawNodes = () => {
-          // Constants
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          // Constants 
           const circleRadius = 4;
 
           /* Draw a circle
@@ -295,7 +315,6 @@ const CombinatoricsCanvas = () => {
          
           };
 
-        drawNodes(); //Call the drawNodes function when the component mounts
 
         //Additional cleanup if needed
         {/*
@@ -303,6 +322,13 @@ const CombinatoricsCanvas = () => {
             //Cleanup code here, if necessary
         };  
         */}
+
+        window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    }
     }, []);
 
     return (

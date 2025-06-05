@@ -1,0 +1,20 @@
+.learning-container {
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.learning-container-left {
+    width: 20%;
+}
+
+.subject-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-container-right {
+    width: 80%;
+}
