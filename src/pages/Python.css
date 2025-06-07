@@ -1,6 +1,6 @@
 /*Menu Section */
 #section-menu {
-    display: flex;
+    display: flex; 
     flex-direction: row;
     
 }

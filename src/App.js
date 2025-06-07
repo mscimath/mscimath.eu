@@ -9,6 +9,7 @@ import Python from './pages/Python';
 import Cpp from './pages/Cpp';
 import DataScience from './pages/DataScience';
 import NoPage from './pages/NoPage';
+import FastAPISecureUserProfileEndpoint from './pages/python_tutorials/FastAPISecureUserProfileEndpoint';
 import HeaderCollapsable from './components/HeaderCollapsable';
 import Blog from './components/Blog';
 import data from './blogData.json';
@@ -50,6 +51,7 @@ export default function App() {
           <Route path='/cpp' element = {<Cpp />} />
           <Route path='/mathematics' element={<Mathematics/>} />
           <Route path='/data_science' element={<DataScience />} />
+          <Route path='/fastapi-secure-user-profile-endpoint' element={<FastAPISecureUserProfileEndpoint />} />
           <Route path='*' element = {<NoPage/>} />
         </Routes>
         

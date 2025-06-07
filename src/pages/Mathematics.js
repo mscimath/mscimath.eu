@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Mathematics.css';
 import Combinatorics from './mathematics_canvas/Combinatorics';
 import Trigonometry from '../components/mathematics/Trigonometry';
@@ -22,8 +23,42 @@ export default function Mathematics(){
             <div className='learning-container'>
                 <div className='learning-container-left'>
                     <div className='subject-menu'>
-                        <a href='#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
-                        <a href='#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                      
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                      
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                      
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                      
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                      
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#combinatorics' onClick={() => handleScrollTo('combinatorics')}>Combinatorics</a>
+                        </button>
+                        <button className='learning-menu-button'>
+                            <a href='#/mathematics#trigonometry' onClick={() => handleScrollTo('trigonometry')}>Trigonometry</a>
+                        </button>                  
                     </div>
                 </div>
                 <div className='learning-container-right'>

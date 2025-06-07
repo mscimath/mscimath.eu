@@ -1,0 +1,20 @@
+.tutorial-section {
+    position: relative;
+    display: block;
+    padding: 0 3rem;
+    text-align: justify;
+}
+
+.tutorial-title {
+   letter-spacing: 6px;
+}
+
+.tutorial-goals {
+    float: right;
+    width: 250px;
+    margin: 0px 0px 0px 40px;
+}
+
+.tutorial-code-example {
+    text-align: left;
+}
